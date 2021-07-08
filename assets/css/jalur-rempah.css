@@ -5,6 +5,7 @@
 body {
   /*font-family: 'Poppins', sans-serif;*/
   font-family: 'Literata', serif;
+   overflow-x:hidden;
 }
 
 .center-v {
@@ -14,6 +15,10 @@ body {
 
 .no-border {
   border: 0px;
+}
+
+.no-background {
+  background-color: transparent;
 }
 
 .navbar {
@@ -31,6 +36,11 @@ body {
 .navbar-light .navbar-nav .show>.nav-link {
   color: #fff;
   font-weight: 500;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show>.nav-link {
+  font-weight: bold;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -79,6 +89,13 @@ body {
 
 }
 
+.hero-img-2 {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  margin-top: -98px;
+}
+
 section {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -98,11 +115,19 @@ section {
   background-image: linear-gradient(rgba(245, 246, 248, .1), rgba(245, 246, 248, 1));
 }
 
-#sosialMedia {
+#sosialMedia,
+#sejarahRempah {
   background-color: white;
   padding-top: 70px;
   padding-bottom: 70px;
   background-image: linear-gradient(rgba(245, 233, 206, .1), rgba(245, 233, 206, 1));
+}
+
+#cardInfo {
+  background-color: white;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-image: linear-gradient(rgba(251, 230, 197, 1), rgba(243, 207, 159, 1));
 }
 
 
@@ -150,7 +175,16 @@ section {
   color: #fff;
 }
 
-.text-hero h1 {
+.text-hero-2 {
+  position: absolute;
+  top: calc(50% - 60px);
+  /*left: 70px;*/
+  color: #fff;
+  width: 100vw;
+}
+
+.text-hero h1,
+.text-hero-2 h1 {
   font-size: 54px;
   font-weight: 600;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.29);
@@ -406,6 +440,26 @@ footer a:hover {
   font-size: 13px;
 }
 
+#desTentang {
+  text-align: justify;
+}
+
+.judul-artikel-tentang {
+  font-size: 16px;
+}
+
+.des-artikel-tentang {
+  font-size: 12px;
+}
+
+
+.judul-card-info {
+  font-size: 18px;
+}
+
+.des-card-info {
+  font-size: 14px;
+}
 
 @media (max-width: 991.98px) {
   .text-hero {
@@ -449,7 +503,7 @@ footer a:hover {
     margin-top: 0rem;
   }
 
-  .card-media{
+  .card-media {
     margin-bottom: 2rem;
   }
 
@@ -457,8 +511,16 @@ footer a:hover {
     flex-basis: 50%;
     text-align: left;
     padding: 15px;
-}
+  }
 
+  .footer-content-logo{
+    text-align: center;
+  }
+
+
+  .footer-alamat{
+    font-size: 16px;
+  }
 
 
 
@@ -519,26 +581,26 @@ footer a:hover {
     height: 270px;
   }
 
-  .footer-content{
+  .footer-content {
     text-align: center;
   }
 
-  .menu-footer{
+  .menu-footer {
     font-size: 18px;
   }
 
   footer ul li p {
     font-size: 16px;
     margin-bottom: .5rem;
-}
+  }
 
-footer a{
+  footer a {
     font-size: 16px;
-}
+  }
 
-.hero-img{
+  .hero-img {
     height: 104vh;
-}
+  }
 
 
 }

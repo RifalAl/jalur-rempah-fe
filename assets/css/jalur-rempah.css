@@ -5,7 +5,7 @@
 body {
   /*font-family: 'Poppins', sans-serif;*/
   font-family: 'Literata', serif;
-   overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 .center-v {
@@ -486,6 +486,41 @@ footer a:hover {
   font-size: 14px;
 }
 
+#exTab3 .nav-pills>li>a {
+  border-radius: 4px 4px 0 0;
+  padding: 15px;
+}
+
+#exTab3 .tab-content {
+  color: white;
+  background-color: #428bca;
+  padding: 5px 15px;
+}
+
+.nav-tabline .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: #E74B49;
+  border-color: #E74B49;
+  color: white;
+
+}
+
+.nav-tabline .nav-link {
+  border: 1px solid gray;
+  color: #202020;
+  width: 125px;
+}
+
+.img-bg-wrap{
+  height: 250px;
+}
+
+.img-bg-wrap img{
+  object-fit: cover;
+  width: 100%;
+}
+
+
 @media (max-width: 991.98px) {
   .text-hero {
     left: 0px;
@@ -538,12 +573,12 @@ footer a:hover {
     padding: 15px;
   }
 
-  .footer-content-logo{
+  .footer-content-logo {
     text-align: center;
   }
 
 
-  .footer-alamat{
+  .footer-alamat {
     font-size: 16px;
   }
 

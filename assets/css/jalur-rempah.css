@@ -17,9 +17,7 @@ body {
   border: 0px;
 }
 
-.no-background {
-  background-color: transparent;
-}
+
 
 .navbar {
   padding-top: 1rem;
@@ -484,6 +482,11 @@ footer a:hover {
 
 .des-card-info {
   font-size: 14px;
+}
+
+.no-background {
+  background-color: transparent;
+ box-shadow: 7px 7px 20px -15px rgba(0, 0, 0, 0); 
 }
 
 @media (max-width: 991.98px) {

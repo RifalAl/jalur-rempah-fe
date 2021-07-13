@@ -220,6 +220,10 @@ section {
   width: 100vw;
 }
 
+.input-hero{
+  top: calc(95% - 60px);
+}
+
 .text-hero h1,
 .text-hero-2 h1 {
   font-size: 54px;
@@ -729,7 +733,6 @@ nav,footer{
   padding: 20px 10px;
   background-image: linear-gradient(rgba(245, 233, 206, .1), rgba(245, 233, 206, 1));
 }
-
 .wrap-aside .sub-judul{
   font-size: 32px;
 }
@@ -737,6 +740,50 @@ nav,footer{
 .judul-berita-aside{
   font-size: 16px;
 }
+
+.hero-peta{
+  height: 85vh;
+}
+
+#selectLokasi,
+#selectRempah{
+  flex-grow: 5 !important;
+}
+
+#btnSelect{
+  flex-grow: 1 !important;
+}
+
+
+/*Select2 Style*/
+.select2-container .select2-selection--single .select2-selection__rendered{
+  padding: .375rem 2.25rem .375rem .75rem;
+}
+
+.select2-container .select2-selection--single,
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+  height: 40px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  line-height: 26px;
+}
+
+.select2-container--default .select2-selection--single{
+  border: .5px solid #fff;
+  border-radius: 4px 0px 0px 4px;
+}
+
+#select2-selectLokasi-container{
+  border-right: .5px solid #d6d6d6;
+}
+.select2-dropdown{
+  border: 0px;
+}
+
+/*end of Select2 Style*/
+
+
 
 @media (max-width: 991.98px) {
   .text-hero {

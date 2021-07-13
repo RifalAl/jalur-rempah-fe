@@ -70,9 +70,10 @@ body {
 }
 
 .bg-nav-baru {
-  background-color: white !important;
+  background-color: rgba(255,255,255,.9) !important;
   padding-top: .1rem;
   padding-bottom: .1rem;
+  box-shadow: 10px 2px 2px -2px rgba(0,0,0,.2);
 }
 
 .clr-black {

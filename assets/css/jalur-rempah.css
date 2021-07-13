@@ -138,6 +138,11 @@ section {
   z-index: 0;
 }
 
+#artikel{
+  position: relative;
+  z-index: 0;
+}
+
 #kegiatan,
 #artikelDanBerita {
   background-color: white;
@@ -250,6 +255,20 @@ section {
   bottom: 0px;
   right: 0;
   width: 100%;
+}
+
+.item-kompas{
+  bottom: 50px;
+  left: 0;
+  width: 8%;
+  opacity: .3;
+}
+
+.item-cengkeh{
+  top: 45%;
+  right: 0;
+  width: 8%;
+  opacity: .3;
 }
 
 .kegiatan-img {
@@ -698,6 +717,24 @@ nav,footer{
 .no-background {
   background-color: transparent;
  box-shadow: 7px 7px 20px -15px rgba(0, 0, 0, 0);
+}
+
+.media-video{
+  height: 240px;
+}
+
+.wrap-aside{
+  background-color: white;
+  padding: 20px 10px;
+  background-image: linear-gradient(rgba(245, 233, 206, .1), rgba(245, 233, 206, 1));
+}
+
+.wrap-aside .sub-judul{
+  font-size: 32px;
+}
+
+.judul-berita-aside{
+  font-size: 16px;
 }
 
 @media (max-width: 991.98px) {

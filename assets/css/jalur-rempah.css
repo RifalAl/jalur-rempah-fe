@@ -18,7 +18,7 @@ body {
 }
 
 
-.mt-5{
+.mt-5 {
   margin-top: 3rem;
 }
 
@@ -70,10 +70,10 @@ body {
 }
 
 .bg-nav-baru {
-  background-color: rgba(255,255,255,.9) !important;
+  background-color: rgba(255, 255, 255, .9) !important;
   padding-top: .1rem;
   padding-bottom: .1rem;
-  box-shadow: 10px 2px 2px -2px rgba(0,0,0,.2);
+  box-shadow: 10px 2px 2px -2px rgba(0, 0, 0, .2);
 }
 
 .clr-black {
@@ -139,7 +139,7 @@ section {
   z-index: 0;
 }
 
-#artikel{
+#artikel {
   position: relative;
   z-index: 0;
 }
@@ -220,7 +220,7 @@ section {
   width: 100vw;
 }
 
-.input-hero{
+.input-hero {
   top: calc(95% - 60px);
 }
 
@@ -262,14 +262,14 @@ section {
   width: 100%;
 }
 
-.item-kompas{
+.item-kompas {
   bottom: 50px;
   left: 0;
   width: 8%;
   opacity: .3;
 }
 
-.item-cengkeh{
+.item-cengkeh {
   top: 45%;
   right: 0;
   width: 8%;
@@ -543,51 +543,51 @@ footer a:hover {
 }
 
 
-.img-bg-wrap img{
+.img-bg-wrap img {
   object-fit: cover;
   width: 100%;
   height: 292px;
   border-radius: 7px;
 }
 
-.img-bg-wrap{
+.img-bg-wrap {
   position: relative;
 }
 
-.text-img{
+.text-img {
   position: absolute;
   bottom: 0;
   left: 0;
   padding: 10px 20px;
   width: 100%;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0, 0, 0, .5);
   border-radius: 0px 0px 7px 7px;
 
 }
 
-.text-img p{
+.text-img p {
   margin-bottom: 0px;
 
 }
 
-.judul-img{
+.judul-img {
   font-size: 14px;
   color: #fff;
   font-weight: 300;
 }
 
-.author-img{
+.author-img {
   font-size: 12px;
   margin-top: 10px;
 }
 
-.tgl-img{
+.tgl-img {
   font-size: 12px;
 }
 
 .author-img,
-.tgl-img{
-  color: rgba(255,255,255,.9);
+.tgl-img {
+  color: rgba(255, 255, 255, .9);
   font-weight: 300;
 }
 
@@ -696,10 +696,10 @@ a.lightbox-close:after {
 .lightbox-target:target {
   opacity: 1;
   top: 0px;
-  left:0px;
+  left: 0px;
   bottom: 0;
   overflow: scroll;
-  z-index:  6;
+  z-index: 6;
 
 }
 
@@ -712,8 +712,9 @@ a.lightbox-close:after {
   top: 0;
 }
 
-nav,footer{
-  z-index: 5!important;
+nav,
+footer {
+  z-index: 5 !important;
 }
 
 /*end of lightbox*/
@@ -721,63 +722,69 @@ nav,footer{
 
 .no-background {
   background-color: transparent;
- box-shadow: 7px 7px 20px -15px rgba(0, 0, 0, 0);
+  box-shadow: 7px 7px 20px -15px rgba(0, 0, 0, 0);
 }
 
-.media-video{
+.media-video {
   height: 240px;
 }
 
-.wrap-aside{
+.wrap-aside {
   background-color: white;
   padding: 20px 10px;
   background-image: linear-gradient(rgba(245, 233, 206, .1), rgba(245, 233, 206, 1));
 }
-.wrap-aside .sub-judul{
+
+.wrap-aside .sub-judul {
   font-size: 32px;
 }
 
-.judul-berita-aside{
+.judul-berita-aside {
   font-size: 16px;
 }
 
-.hero-peta{
+.hero-peta {
   height: 85vh;
 }
 
-#selectLokasi,
-#selectRempah{
-  flex-grow: 5 !important;
+#selectLokasi {
+  border-radius: 4px 0px 0px 4px;
 }
 
-#btnSelect{
-  flex-grow: 1 !important;
+#selectRempah {
+  border-radius: 0px;
 }
+
+#btnSelect {
+  /*flex-grow: 1 !important;*/
+}
+
 
 
 /*Select2 Style*/
-.select2-container .select2-selection--single .select2-selection__rendered{
+.select2-container .select2-selection--single .select2-selection__rendered {
   padding: .375rem 2.25rem .375rem .75rem;
 }
 
 .select2-container .select2-selection--single,
-.select2-container--default .select2-selection--single .select2-selection__arrow{
+.select2-container--default .select2-selection--single .select2-selection__arrow {
   height: 40px;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered{
+.select2-container--default .select2-selection--single .select2-selection__rendered {
   line-height: 26px;
 }
 
-.select2-container--default .select2-selection--single{
+.select2-container--default .select2-selection--single {
   border: .5px solid #fff;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 0px 0px 0px 0px;
 }
 
-#select2-selectLokasi-container{
+#select2-selectLokasi-container {
   border-right: .5px solid #d6d6d6;
 }
-.select2-dropdown{
+
+.select2-dropdown {
   border: 0px;
 }
 
@@ -786,6 +793,18 @@ nav,footer{
 .navbar-brand {
   margin-right: 3rem !important;
 }
+
+.wrap-select .col-lg-5,
+.wrap-select .col-lg-2 {
+  padding: 0px !important;
+}
+
+.btn-select {
+  border-radius: 0px 4px 4px 0px;
+}
+
+/*Search button style*/
+
 
 @media (max-width: 991.98px) {
   .text-hero {
@@ -848,8 +867,28 @@ nav,footer{
     font-size: 16px;
   }
 
+  .wrap-select .col-md-5,
+  .wrap-select .col-md-2 {
+    padding: 5px 15px;
+  }
 
+  .input-hero {
+    top: calc(80% - 60px);
+  }
 
+  .wrap-btn-select {
+    text-align: center;
+  }
+
+  .btn-select {
+    width: 100%;
+  }
+
+  #selectLokasi,
+  #selectRempah,
+  #btnSelect {
+    border-radius: 4px;
+  }
 
 }
 

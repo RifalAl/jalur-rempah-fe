@@ -783,7 +783,9 @@ nav,footer{
 
 /*end of Select2 Style*/
 
-
+.navbar-brand {
+  margin-right: 3rem !important;
+}
 
 @media (max-width: 991.98px) {
   .text-hero {

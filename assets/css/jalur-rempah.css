@@ -17,6 +17,7 @@ body {
   border: 0px;
 }
 
+
 .mt-5{
   margin-top: 3rem;
 }
@@ -24,6 +25,7 @@ body {
 .no-background {
   background-color: transparent;
 }
+
 
 .navbar {
   padding-top: 1rem;
@@ -490,6 +492,7 @@ footer a:hover {
   font-size: 14px;
 }
 
+
 #exTab3 .nav-pills>li>a {
   border-radius: 4px 4px 0 0;
   padding: 15px;
@@ -691,6 +694,11 @@ nav,footer{
 
 /*end of lightbox*/
 
+
+.no-background {
+  background-color: transparent;
+ box-shadow: 7px 7px 20px -15px rgba(0, 0, 0, 0);
+}
 
 @media (max-width: 991.98px) {
   .text-hero {

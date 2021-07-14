@@ -9,6 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/jalur-rempah.css">
   <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Country-Selecter-with-Flags-flagstrap/dist/css/flags.css">
   <title>Jalur Rempah</title>
   <link rel="shortcut icon" href="assets/img/logo/favicon.png">
 </head>
@@ -37,17 +38,21 @@
             <a class="nav-link active" href="informasi.html">Informasi</a>
           </li>
         </ul>
-        <div class="wrap-menu-right" style="">
-          <span style="margin-right:10px">
-            <a href="#">
+        <div class="wrap-menu-right row" style="">
+          <div class="col-md-8">
+            <button class="btn icon-search" data-bs-toggle="modal" data-bs-target="#searchModal">
               <i class="fa fa-search clr-white"></i>
-            </a>
-          </span>
-          <span class="right-menu">
-            <a href="#">
-              <img class="flag" src="assets/img/bendera/flag-indonesia.png" width="20"> IDN
-            </a>
-          </span>
+            </button>
+          </div>
+          <div class="col-md-1 text-right">
+            <img for="selectLanguage" id="languageFlag" src="assets/img/bendera/flag-indonesia.png" width="60%">
+          </div>
+          <div class="col-md-3">
+            <select id="selectLanguage" class="form-select form-select-language" aria-label="Default select example">
+              <option value="idn">INA</option>
+              <option value="eng">ENG</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
@@ -280,6 +285,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
         </div>
       </section>
       <!----------------------------------------------------------->
@@ -334,6 +341,20 @@
       </section>
     </div>
   </main>
+  <!-- Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-search">
+      <div class="modal-content modal-body-search">
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-lg" placeholder="Cari disini...." aria-describedby="btnCari">
+            <button class="btn btn-lg btn-danger" type="button" id="btnCari"> <i class="fa fa-search mr-2"></i> Cari</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
   <footer>
     <img class="footer-bg-1" src="assets/img/asset-jelajah.png" width="50%">
     <img class="footer-bg-2" src="assets/img/asset-jelajah2.png" width="50%">
@@ -419,6 +440,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="http://platform.twitter.com/widgets.js"></script>
+<script src="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Country-Selecter-with-Flags-flagstrap/dist/js/jquery.flagstrap.js"></script>
 <script>
 $(window).scroll(function() {
 
@@ -456,6 +478,19 @@ $(function() {
 
   });
 
+});
+</script>
+<script>
+$(document).ready(function() {
+  $('#selectLanguage').change(function() {
+    var language = $("#selectLanguage option:selected").text();
+    console.log(language);
+    if(language == "INA"){
+      $("#languageFlag").attr("src","assets/img/bendera/flag-indonesia.png");
+    }else{
+      $("#languageFlag").attr("src","assets/img/bendera/flag-english.png");
+    }
+  });
 });
 </script>
 

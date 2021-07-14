@@ -70,15 +70,12 @@ body {
 }
 
 .bg-nav-baru {
-  background-color: rgba(255, 255, 255, .9) !important;
+  background-color: rgba(255, 255, 255, 1) !important;
   padding-top: .1rem;
   padding-bottom: .1rem;
   box-shadow: 10px 2px 2px -2px rgba(0, 0, 0, .2);
 }
 
-.clr-black {
-  color: black;
-}
 
 .nav-item {
   margin-right: 13px;
@@ -145,7 +142,8 @@ section {
 }
 
 #kegiatan,
-#artikelDanBerita {
+#artikelDanBerita,
+ {
   background-color: white;
   padding-top: 70px;
   padding-bottom: 70px;
@@ -153,7 +151,8 @@ section {
 }
 
 #sosialMedia,
-#sejarahRempah {
+#sejarahRempah,
+.full-bg{
   background-color: white;
   padding-top: 70px;
   padding-bottom: 70px;
@@ -803,10 +802,54 @@ footer {
   border-radius: 0px 4px 4px 0px;
 }
 
+.navbar-nav {
+  margin-right: 5rem;
+}
+
 /*Search button style*/
 
 
+.modal-body-search {
+  background-color: transparent;
+  border: 0px;
+}
+
+.modal-dialog-search {
+  min-height: calc(100% - 32rem);
+}
+
+.icon-search {
+  line-height: .5;
+  margin-right: 5px;
+}
+
+/*Language select*/
+.form-select-language {
+  background: transparent;
+  border: 0px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
+}
+
+.wrap-menu-right .col-md-8,
+.wrap-menu-right .col-md-1,
+.wrap-menu-right .col-md-3 {
+  padding: 0px;
+}
+
+.clr-black {
+  color: #202020;
+}
+
+
+
 @media (max-width: 991.98px) {
+
+  .navbar-nav {
+    margin-right: 0rem;
+  }
+
   .text-hero {
     left: 0px;
   }
@@ -856,6 +899,7 @@ footer {
     flex-basis: 50%;
     text-align: left;
     padding: 15px;
+    margin-top: -9px;
   }
 
   .footer-content-logo {

@@ -39,23 +39,27 @@
             <a class="nav-link" href="informasi.html">Informasi</a>
           </li>
         </ul>
-        <div class="wrap-menu-right" style="">
-          <span style="margin-right:10px">
-            <a href="#">
+        <div class="wrap-menu-right row" style="">
+          <div class="col-md-8">
+            <button class="btn icon-search" data-bs-toggle="modal" data-bs-target="#searchModal">
               <i class="fa fa-search clr-black"></i>
-            </a>
-          </span>
-          <span class="right-menu">
-            <a href="#" class="text-dark">
-              <img class="flag" src="assets/img/bendera/flag-indonesia.png" width="20"> IDN
-            </a>
-          </span>
+            </button>
+          </div>
+          <div class="col-md-1 text-right">
+            <img id="languageFlag" src="assets/img/bendera/flag-indonesia.png" width="60%">
+          </div>
+          <div class="col-md-3">
+            <select id="selectLanguage" class="form-select form-select-language clr-black" aria-label="Default select example">
+              <option value="idn">INA</option>
+              <option value="eng">ENG</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
   </nav>
   <main>
-    <div id="content">
+    <div id="content" class="full-bg">
       <section id="sliderArtikel">
         <div class="container">
           <div class="row justify-content-center">
@@ -199,50 +203,66 @@
           </div>
         </div>
       </section>
-      <section class="container mt-5">
-        <header class="row justify-content-center mb-2">
-          <div class="col-md-6">
-            <h2 class="sub-judul aside-judul">Berita Terpopuler</h2>
-            <p>Berbagai upaya dilakukan untuk melestarikan jalur rempah, salah satunya dengan melakukan berbagai kegiatan.</p>
-          </div>
-          <div class="col-md-6 center-v text-end">
-          </div>
-        </header>
-        <section class="row justify-content-center">
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="card no-border no-background card-body">
-              <img src="assets/img/berita-detail/gambar6.png" class="card-img-top mb-4" alt="...">
-              <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
-              <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Sed porttitor lectus nibh.</p>
-              <p class="penulis-artikel">Ahmad Rifaldi</p>
-              <p class="tgl-artikel">20 November 2021</p>
-              <a href="berita-detail.html" class="stretched-link"></a>
+      <section id="beritaTerpopuler">
+        <div class="container">
+          <header class="row justify-content-center mb-2">
+            <div class="col-md-6">
+              <h2 class="sub-judul aside-judul">Berita Terpopuler</h2>
+              <p>Berbagai upaya dilakukan untuk melestarikan jalur rempah, salah satunya dengan melakukan berbagai kegiatan.</p>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="card no-border no-background card-body">
-              <img src="assets/img/berita-detail/gambar7.png" class="card-img-top mb-4" alt="...">
-              <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
-              <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Sed porttitor lectus nibh.</p>
-              <p class="penulis-artikel">Ahmad Rifaldi</p>
-              <p class="tgl-artikel">20 November 2021</p>
-              <a href="berita-detail.html" class="stretched-link"></a>
+            <div class="col-md-6 center-v text-end">
             </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="card no-border no-background card-body">
-              <img src="assets/img/berita-detail/gambar8.png" class="card-img-top mb-4" alt="...">
-              <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
-              <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Sed porttitor lectus nibh.</p>
-              <p class="penulis-artikel">Ahmad Rifaldi</p>
-              <p class="tgl-artikel">20 November 2021</p>
-              <a href="berita-detail.html" class="stretched-link"></a>
+          </header>
+          <section class="row justify-content-center">
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card no-border no-background card-body">
+                <img src="assets/img/berita-detail/gambar6.png" class="card-img-top mb-4" alt="...">
+                <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
+                <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Sed porttitor lectus nibh.</p>
+                <p class="penulis-artikel">Ahmad Rifaldi</p>
+                <p class="tgl-artikel">20 November 2021</p>
+                <a href="berita-detail.html" class="stretched-link"></a>
+              </div>
             </div>
-          </div>
-        </section>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card no-border no-background card-body">
+                <img src="assets/img/berita-detail/gambar7.png" class="card-img-top mb-4" alt="...">
+                <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
+                <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Sed porttitor lectus nibh.</p>
+                <p class="penulis-artikel">Ahmad Rifaldi</p>
+                <p class="tgl-artikel">20 November 2021</p>
+                <a href="berita-detail.html" class="stretched-link"></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card no-border no-background card-body">
+                <img src="assets/img/berita-detail/gambar8.png" class="card-img-top mb-4" alt="...">
+                <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
+                <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Sed porttitor lectus nibh.</p>
+                <p class="penulis-artikel">Ahmad Rifaldi</p>
+                <p class="tgl-artikel">20 November 2021</p>
+                <a href="berita-detail.html" class="stretched-link"></a>
+              </div>
+            </div>
+          </section>
+        </div>
       </section>
     </div>
   </main>
+  <!-- Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-search">
+      <div class="modal-content modal-body-search">
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-lg" placeholder="Cari disini...." aria-describedby="btnCari">
+            <button class="btn btn-lg btn-danger" type="button" id="btnCari"> <i class="fa fa-search mr-2"></i> Cari</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
   <footer>
     <img class="footer-bg-1" src="assets/img/asset-jelajah.png" width="50%">
     <img class="footer-bg-2" src="assets/img/asset-jelajah2.png" width="50%">
@@ -396,6 +416,19 @@ $(document).ready(function() {
         }
       }
     ]
+  });
+});
+</script>
+<script>
+$(document).ready(function() {
+  $('#selectLanguage').change(function() {
+    var language = $("#selectLanguage option:selected").text();
+    console.log(language);
+    if (language == "INA") {
+      $("#languageFlag").attr("src", "assets/img/bendera/flag-indonesia.png");
+    } else {
+      $("#languageFlag").attr("src", "assets/img/bendera/flag-english.png");
+    }
   });
 });
 </script>

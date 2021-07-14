@@ -37,17 +37,21 @@
             <a class="nav-link active" href="informasi.html">Informasi</a>
           </li>
         </ul>
-        <div class="wrap-menu-right" style="">
-          <span style="margin-right:10px">
-            <a href="#">
+        <div class="wrap-menu-right row" style="">
+          <div class="col-md-8">
+            <button class="btn icon-search" data-bs-toggle="modal" data-bs-target="#searchModal">
               <i class="fa fa-search clr-black"></i>
-            </a>
-          </span>
-          <span class="right-menu">
-            <a href="#" class="text-dark">
-              <img class="flag" src="assets/img/bendera/flag-indonesia.png" width="20"> IDN
-            </a>
-          </span>
+            </button>
+          </div>
+          <div class="col-md-1 text-right">
+            <img id="languageFlag" src="assets/img/bendera/flag-indonesia.png" width="60%">
+          </div>
+          <div class="col-md-3">
+            <select id="selectLanguage" class="form-select form-select-language clr-black" aria-label="Default select example">
+              <option value="idn">INA</option>
+              <option value="eng">ENG</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
@@ -139,6 +143,21 @@
       </section>
     </div>
   </main>
+  <!-- Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-search">
+      <div class="modal-content modal-body-search">
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-lg" placeholder="Cari disini...." aria-describedby="btnCari">
+            <button class="btn btn-lg btn-danger" type="button" id="btnCari"> <i class="fa fa-search mr-2"></i> Cari</button>
+          </div>
+          <footer></footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
   <footer>
     <img class="footer-bg-1" src="assets/img/asset-jelajah.png" width="50%">
     <img class="footer-bg-2" src="assets/img/asset-jelajah2.png" width="50%">
@@ -261,6 +280,19 @@ $(function() {
 
   });
 
+});
+</script>
+<script>
+$(document).ready(function() {
+  $('#selectLanguage').change(function() {
+    var language = $("#selectLanguage option:selected").text();
+    console.log(language);
+    if (language == "INA") {
+      $("#languageFlag").attr("src", "assets/img/bendera/flag-indonesia.png");
+    } else {
+      $("#languageFlag").attr("src", "assets/img/bendera/flag-english.png");
+    }
+  });
 });
 </script>
 

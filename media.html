@@ -38,15 +38,15 @@
           </li>
         </ul>
         <div class="wrap-menu-right row" style="">
-          <div class="col-md-8">
+          <div class="col-2 col-md-8 text-right">
             <button class="btn icon-search" data-bs-toggle="modal" data-bs-target="#searchModal">
               <i class="fa fa-search clr-white"></i>
             </button>
           </div>
-          <div class="col-md-1 text-right">
-            <img id="languageFlag" src="assets/img/bendera/flag-indonesia.png" width="60%">
+          <div class="col-1 col-md-1 text-right">
+            <img for="selectLanguage" id="languageFlag" src="assets/img/bendera/flag-indonesia.png" width="60%">
           </div>
-          <div class="col-md-3">
+          <div class="col-3 col-md-3">
             <select id="selectLanguage" class="form-select form-select-language" aria-label="Default select example">
               <option value="idn">INA</option>
               <option value="eng">ENG</option>
@@ -816,6 +816,12 @@ function initializeVideoModule(videoModule) {
 }
 </script>
 <script>
+$(document).ready(function() {
+  if ($(window).width() <= 1000) {
+    $(".navbar").addClass("bg-nav");
+    $(".navbar").removeClass("bg-trans");
+  }
+});
 $(window).scroll(function() {
 
   if ($(window).width() >= 1000) {

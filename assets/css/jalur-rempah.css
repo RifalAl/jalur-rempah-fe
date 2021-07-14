@@ -1011,5 +1011,17 @@ footer {
     height: 104vh;
   }
 
+  #languageFlag{
+    width: 70%;
+  }
+
+  .text-right{
+    text-align: right;
+  }
+
+  .text-hero h1, .text-hero-2 h1{
+    font-size: 40px;
+  }
+
 
 }

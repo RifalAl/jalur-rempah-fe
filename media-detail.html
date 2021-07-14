@@ -264,6 +264,12 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="http://platform.twitter.com/widgets.js"></script>
 <script>
+$(document).ready(function() {
+  if ($(window).width() <= 1000) {
+    $(".navbar").addClass("bg-nav");
+    $(".navbar").removeClass("bg-trans");
+  }
+});
 $(window).scroll(function() {
 
   if ($(window).width() >= 1000) {
@@ -271,14 +277,14 @@ $(window).scroll(function() {
     //>=, not <=
     if (scroll >= 50) {
       //clearHeader, not clearheader - caps H
-      $(".navbar").addClass("bg-nav-baru");
+      $(".navbar").addClass("bg-nav");
       $(".navbar").removeClass("bg-trans");
     } else {
       $(".navbar").addClass("bg-trans");
-      $(".navbar").removeClass("bg-nav-baru");
+      $(".navbar").removeClass("bg-nav");
     }
   } else {
-    $(".navbar").addClass("bg-nav-baru");
+    $(".navbar").addClass("bg-nav");
     $(".navbar").removeClass("bg-trans");
   }
 

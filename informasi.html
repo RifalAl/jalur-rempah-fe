@@ -39,15 +39,15 @@
           </li>
         </ul>
         <div class="wrap-menu-right row" style="">
-          <div class="col-md-8">
+          <div class="col-2 col-md-8 text-right">
             <button class="btn icon-search" data-bs-toggle="modal" data-bs-target="#searchModal">
               <i class="fa fa-search clr-white"></i>
             </button>
           </div>
-          <div class="col-md-1 text-right">
+          <div class="col-1 col-md-1 text-right">
             <img for="selectLanguage" id="languageFlag" src="assets/img/bendera/flag-indonesia.png" width="60%">
           </div>
-          <div class="col-md-3">
+          <div class="col-3 col-md-3">
             <select id="selectLanguage" class="form-select form-select-language" aria-label="Default select example">
               <option value="idn">INA</option>
               <option value="eng">ENG</option>
@@ -439,9 +439,13 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="http://platform.twitter.com/widgets.js"></script>
-<script src="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Country-Selecter-with-Flags-flagstrap/dist/js/jquery.flagstrap.js"></script>
 <script>
+$(document).ready(function() {
+  if ($(window).width() <= 1000) {
+    $(".navbar").addClass("bg-nav");
+    $(".navbar").removeClass("bg-trans");
+  }
+});
 $(window).scroll(function() {
 
   if ($(window).width() >= 1000) {
@@ -485,10 +489,10 @@ $(document).ready(function() {
   $('#selectLanguage').change(function() {
     var language = $("#selectLanguage option:selected").text();
     console.log(language);
-    if(language == "INA"){
-      $("#languageFlag").attr("src","assets/img/bendera/flag-indonesia.png");
-    }else{
-      $("#languageFlag").attr("src","assets/img/bendera/flag-english.png");
+    if (language == "INA") {
+      $("#languageFlag").attr("src", "assets/img/bendera/flag-indonesia.png");
+    } else {
+      $("#languageFlag").attr("src", "assets/img/bendera/flag-english.png");
     }
   });
 });

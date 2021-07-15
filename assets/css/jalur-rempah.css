@@ -33,6 +33,11 @@ body {
   transition: all .5s ease;
 }
 
+.navbar-baru .navbar-nav .nav-link:focus{
+  color: gray;
+
+}
+
 .navbar-light .navbar-nav .nav-link {
   color: white;
   font-size: 16px;
@@ -313,6 +318,16 @@ section {
   background-color: #fff;
 }
 
+.card-artikel,
+.card-media{
+  transition: all .5s ease;
+}
+
+.card-artikel:hover,
+.card-media:hover{
+  transform: scale(1.05);
+}
+
 .judul-artikel {
   font-size: 18px;
   font-weight: 500;
@@ -381,6 +396,7 @@ section {
   width: 100%;
   height: 302px;
   position: relative;
+  z-index: 0px;
 }
 
 .video-magnet-dunia {
@@ -568,6 +584,11 @@ footer a:hover {
 
 .img-bg-wrap {
   position: relative;
+  transition: all .5s ease;
+}
+
+.img-bg-wrap:hover{
+  transform: scale(1.05);
 }
 
 .text-img {
@@ -1210,6 +1231,29 @@ footer {
   transform: scale(1);
 }
 /*END PAGINATION*/
+
+.wrap-slide-img{
+  position: relative;
+}
+
+.wrap-text-slide-img{
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, .7);
+  bottom: 0px;
+  left: 0px;
+}
+
+.wrap-text-slide-img p{
+  margin-bottom: 0px;
+}
+
+.video-artikel{
+  height: 414px;
+  z-index: 0;
+}
 
 
 @media (max-width: 991.98px) {

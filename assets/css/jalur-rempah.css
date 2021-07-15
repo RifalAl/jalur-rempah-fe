@@ -120,7 +120,8 @@ body {
 
 .hero-img-2 {
   width: 100%;
-  height: 60vh;
+  /*height: 60vh;*/
+  height: 72vh;
   object-fit: cover;
   margin-top: -98px;
 }
@@ -132,6 +133,12 @@ section {
 
 #jelajah {
   background-color: #FEF7E8;
+  position: relative;
+  z-index: 0;
+}
+
+#magnetDunia {
+  background-image: linear-gradient(rgba(245, 246, 248, .1), rgba(245, 246, 248, 1));
   position: relative;
   z-index: 0;
 }
@@ -151,11 +158,16 @@ section {
 }
 
 #sosialMedia,
-#sejarahRempah,
-.full-bg {
+#sejarahRempah {
   background-color: white;
   padding-top: 70px;
   padding-bottom: 70px;
+  background-image: linear-gradient(rgba(245, 233, 206, .1), rgba(245, 233, 206, 1));
+}
+
+
+.full-bg{
+  background-color: white;
   background-image: linear-gradient(rgba(245, 233, 206, .1), rgba(245, 233, 206, 1));
 }
 
@@ -202,6 +214,7 @@ section {
 
 #hero {
   position: relative;
+  margin-top: -97px;
 }
 
 .text-hero {
@@ -213,7 +226,7 @@ section {
 
 .text-hero-2 {
   position: absolute;
-  top: calc(50% - 60px);
+  top: calc(50% - 30px);
   /*left: 70px;*/
   color: #fff;
   width: 100vw;
@@ -368,6 +381,10 @@ section {
   width: 100%;
   height: 302px;
   position: relative;
+}
+
+.video-magnet-dunia {
+  height: 450px;
 }
 
 .video-layer {
@@ -1139,13 +1156,61 @@ footer {
 /*END TIMELINE*/
 
 
-  .d-desktop{
-    display: block
-  }
+.d-desktop {
+  display: block
+}
 
-  .d-mobile{
-    display: none;
-  }
+.d-mobile {
+  display: none;
+}
+
+.p-2 {
+  padding: 1rem;
+}
+
+.slick-dots li button:before {
+  font-size: .75rem;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #8B7D5D;
+}
+
+.mask {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+/*PAGINATION*/
+.page-item.disabled .page-link,
+.page-item .page-link{
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.page-item .page-link{
+  color: #745E43;
+}
+
+.page-item .page-link:hover{
+  transform: scale(1.15);
+  color: red;
+}
+
+.page-item.active .page-link {
+  border-radius: 10px;
+  background-color: #745E43;
+  border-color:  #745E43;
+}
+
+
+.page-item.active .page-link:hover{
+  color: white;
+  transform: scale(1);
+}
+/*END PAGINATION*/
+
 
 @media (max-width: 991.98px) {
 
@@ -1290,11 +1355,11 @@ footer {
     left: 8px;
   }
 
-  .d-desktop{
+  .d-desktop {
     display: none;
   }
 
-  .d-mobile{
+  .d-mobile {
     display: block;
   }
 
@@ -1389,9 +1454,22 @@ footer {
   }
 
   section {
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  #hero {
+    margin-top: -68px;
+  }
+
+  .mask {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-slider .flickity-prev-next-button{
+    width: 30px;
+  }
 
 
 

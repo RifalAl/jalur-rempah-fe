@@ -163,7 +163,8 @@ section {
 }
 
 #sosialMedia,
-#sejarahRempah {
+#sejarahRempah,
+#mediaJalurRempah {
   background-color: white;
   padding-top: 70px;
   padding-bottom: 70px;
@@ -782,6 +783,7 @@ footer {
 
 .hero-peta {
   height: 85vh;
+  margin-top: 0px;
 }
 
 #selectLokasi {

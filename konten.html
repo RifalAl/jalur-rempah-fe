@@ -8,6 +8,8 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/jalur-rempah.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
   <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
   <title>Jalur Rempah</title>
   <link rel="shortcut icon" href="assets/img/logo/favicon.png">
@@ -17,15 +19,15 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top bg-trans">
     <div class="container-fluid container">
       <a class="navbar-brand" href="index.html">
-        <img src="assets/img/logo/logo.png" width="150px">
+        <img src="assets/img/logo-footer.png" width="150px">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse navbar-baru" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="index.html">Beranda</a>
+            <a class="nav-link" aria-current="page" href="index.html">Beranda</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -47,14 +49,14 @@
         <div class="wrap-menu-right row" style="">
           <div class="col-2 col-md-8 text-right">
             <button class="btn icon-search" data-bs-toggle="modal" data-bs-target="#searchModal">
-              <i class="fa fa-search clr-white"></i>
+              <i class="fa fa-search clr-black"></i>
             </button>
           </div>
           <div class="col-1 col-md-1 text-right">
             <img for="selectLanguage" id="languageFlag" src="assets/img/bendera/flag-indonesia.png" width="60%">
           </div>
           <div class="col-3 col-md-3">
-            <select id="selectLanguage" class="form-select form-select-language" aria-label="Default select example">
+            <select id="selectLanguage" class="form-select form-select-language clr-black" aria-label="Default select example">
               <option value="idn">INA</option>
               <option value="eng">ENG</option>
             </select>
@@ -63,22 +65,129 @@
       </div>
     </div>
   </nav>
-  <header id="hero">
-    <img class="hero-img-2" src="assets/img/hero/hero-4.jpg">
-    <div class="text-hero-2">
-      <div class="">
-        <div class="col-lg-12 text-center">
-          <h1>Media</h1>
-        </div>
-      </div>
-    </div>
-  </header>
   <main>
-    <div id="content">
-      <section id="sejarahRempah">
+    <div id="content" class="full-bg">
+      <section id="sliderArtikel">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-10">
+            <div class="col-lg-12">
+              <header class="mb-2">
+                <h2 class="sub-judul text-center">Feature</h2>
+              </header>
+              <div class="feature">
+                <div>
+                  <div class="card no-border card-artikel no-background">
+                    <img src="assets/img/artikel-berita/artikel-1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
+                      <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Sed porttitor lectus nibh.</p>
+                    </div>
+                    <a href="detail-berita.html" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div>
+                  <div class="card no-border card-artikel no-background">
+                    <img src="assets/img/artikel-berita/artikel-1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
+                      <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Sed porttitor lectus nibh.</p>
+                    </div>
+                    <a href="detail-berita.html" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div>
+                  <div class="card no-border card-artikel no-background">
+                    <img src="assets/img/artikel-berita/artikel-1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
+                      <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JC...</p>
+                    </div>
+                    <a href="detail-berita.html" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div>
+                  <div class="card no-border card-artikel no-background">
+                    <img src="assets/img/artikel-berita/artikel-1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
+                      <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JC...</p>
+                    </div>
+                    <a href="detail-berita.html" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div>
+                  <div class="card no-border card-artikel no-background">
+                    <img src="assets/img/artikel-berita/artikel-1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
+                      <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JC...</p>
+                    </div>
+                    <a href="detail-berita.html" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div>
+                  <div class="card no-border card-artikel no-background">
+                    <img src="assets/img/artikel-berita/artikel-1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
+                      <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JC...</p>
+                    </div>
+                    <a href="detail-berita.html" class="stretched-link"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="secBerita" class="d-none">
+        <div class="container">
+          <header class="row justify-content-center">
+            <div class="col-md-12 text-center">
+              <h2 class="sub-judul aside-judul">Berita</h2>
+              <p>Berbagai upaya dilakukan untuk melestarikan jalur rempah, salah satunya dengan melakukan berbagai kegiatan.</p>
+            </div>
+            <div class="col-md-6 center-v text-end">
+            </div>
+          </header>
+          <section class="row justify-content-center">
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card no-border no-background card-body">
+                <img src="assets/img/berita-detail/gambar6.png" class="card-img-top mb-4" alt="...">
+                <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
+                <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Sed porttitor lectus nibh.</p>
+                <p class="penulis-artikel">Ahmad Rifaldi</p>
+                <p class="tgl-artikel">20 November 2021</p>
+                <a href="detail-berita.html" class="stretched-link"></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card no-border no-background card-body">
+                <img src="assets/img/berita-detail/gambar7.png" class="card-img-top mb-4" alt="...">
+                <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
+                <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Sed porttitor lectus nibh.</p>
+                <p class="penulis-artikel">Ahmad Rifaldi</p>
+                <p class="tgl-artikel">20 November 2021</p>
+                <a href="detail-berita.html" class="stretched-link"></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card no-border no-background card-body">
+                <img src="assets/img/berita-detail/gambar8.png" class="card-img-top mb-4" alt="...">
+                <h3 class="card-title judul-artikel">Cagar Budaya di Pati: Sejarah Akulturasi dan Jejak Perdagangan Rempah</h3>
+                <p class="card-text des-artikel minimize">Pati, merupakan sebuah kabupaten di wilayah Jawa Tengah, ia berbatasan dengan Kabupaten JCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Sed porttitor lectus nibh.</p>
+                <p class="penulis-artikel">Ahmad Rifaldi</p>
+                <p class="tgl-artikel">20 November 2021</p>
+                <a href="detail-berita.html" class="stretched-link"></a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section id="secMedia">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12">
               <header class="text-center">
                 <h2 class="sub-judul">Media Jalur Rempah</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna.</p>
@@ -103,7 +212,7 @@
                 </ul>
                 <div class="tab-content mt-5" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="tab-artikel" role="tabpanel" aria-labelledby="tab-artikel-tab">
-                    <div class="row">
+                    <div class="row justify-content-center">
                       <div class="col-md-6 col-lg-4 mb-4">
                         <div class="card no-border card-artikel">
                           <img src="assets/img/artikel-berita/artikel-1.png" class="card-img-top" alt="...">
@@ -117,7 +226,7 @@
                               20 November 2021
                             </p>
                           </div>
-                          <a href="list-berita.html" class="stretched-link"></a>
+                          <a href="detail-berita.html" class="stretched-link"></a>
                         </div>
                       </div>
                       <div class="col-md-6 col-lg-4 mb-4">
@@ -133,7 +242,7 @@
                               20 November 2021
                             </p>
                           </div>
-                          <a href="list-berita.html" class="stretched-link"></a>
+                          <a href="detail-berita.html" class="stretched-link"></a>
                         </div>
                       </div>
                       <div class="col-md-6 col-lg-4 mb-4">
@@ -149,7 +258,7 @@
                               20 November 2021
                             </p>
                           </div>
-                          <a href="list-berita.html" class="stretched-link"></a>
+                          <a href="detail-berita.html" class="stretched-link"></a>
                         </div>
                       </div>
                       <div class="col-md-6 col-lg-4 mb-4">
@@ -165,7 +274,7 @@
                               20 November 2021
                             </p>
                           </div>
-                          <a href="list-berita.html" class="stretched-link"></a>
+                          <a href="detail-berita.html" class="stretched-link"></a>
                         </div>
                       </div>
                       <div class="col-md-6 col-lg-4 mb-4">
@@ -181,7 +290,7 @@
                               20 November 2021
                             </p>
                           </div>
-                          <a href="list-berita.html" class="stretched-link"></a>
+                          <a href="detail-berita.html" class="stretched-link"></a>
                         </div>
                       </div>
                       <div class="col-md-6 col-lg-4 mb-4">
@@ -197,7 +306,7 @@
                               20 November 2021
                             </p>
                           </div>
-                          <a href="list-berita.html" class="stretched-link"></a>
+                          <a href="detail-berita.html" class="stretched-link"></a>
                         </div>
                       </div>
                       <div class="col-md-6 col-lg-4 mb-4">
@@ -213,7 +322,7 @@
                               20 November 2021
                             </p>
                           </div>
-                          <a href="list-berita.html" class="stretched-link"></a>
+                          <a href="detail-berita.html" class="stretched-link"></a>
                         </div>
                       </div>
                       <div class="col-md-6 col-lg-4 mb-4">
@@ -229,7 +338,7 @@
                               20 November 2021
                             </p>
                           </div>
-                          <a href="list-berita.html" class="stretched-link"></a>
+                          <a href="detail-berita.html" class="stretched-link"></a>
                         </div>
                       </div>
                       <div class="col-md-6 col-lg-4 mb-4">
@@ -245,13 +354,13 @@
                               20 November 2021
                             </p>
                           </div>
-                          <a href="list-berita.html" class="stretched-link"></a>
+                          <a href="detail-berita.html" class="stretched-link"></a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="tab-pane fade" id="tab-foto" role="tabpanel" aria-labelledby="tab-foto-tab">
-                    <div class="row">
+                    <div class="row justify-content-center">
                       <div class="col-lg-4 mb-4">
                         <div class="img-bg-wrap">
                           <img src="assets/img/hero/hero-3.jpg">
@@ -260,7 +369,7 @@
                             <p class="author-img">Ahmad Rifaldi</p>
                             <p class="tgl-img">20 November 2021</p>
                           </div>
-                          <a class="stretched-link lightbox" href="#previewImg"></a>
+                          <a class="stretched-link lightbox" href="detail-foto.html"></a>
                         </div>
                       </div>
                       <div class="col-lg-4 mb-4">
@@ -271,7 +380,7 @@
                             <p class="author-img">Ahmad Rifaldi</p>
                             <p class="tgl-img">20 November 2021</p>
                           </div>
-                          <a class="stretched-link lightbox" href="#previewImg"></a>
+                          <a class="stretched-link lightbox" href="detail-foto.html"></a>
                         </div>
                       </div>
                       <div class="col-lg-4 mb-4">
@@ -282,7 +391,7 @@
                             <p class="author-img">Ahmad Rifaldi</p>
                             <p class="tgl-img">20 November 2021</p>
                           </div>
-                          <a class="stretched-link lightbox" href="#previewImg"></a>
+                          <a class="stretched-link lightbox" href="detail-foto.html"></a>
                         </div>
                       </div>
                       <div class="col-lg-4 mb-4">
@@ -293,7 +402,7 @@
                             <p class="author-img">Ahmad Rifaldi</p>
                             <p class="tgl-img">20 November 2021</p>
                           </div>
-                          <a class="stretched-link lightbox" href="#previewImg"></a>
+                          <a class="stretched-link lightbox" href="detail-foto.html"></a>
                         </div>
                       </div>
                       <div class="col-lg-4 mb-4">
@@ -304,7 +413,7 @@
                             <p class="author-img">Ahmad Rifaldi</p>
                             <p class="tgl-img">20 November 2021</p>
                           </div>
-                          <a class="stretched-link lightbox" href="#previewImg"></a>
+                          <a class="stretched-link lightbox" href="detail-foto.html"></a>
                         </div>
                       </div>
                       <div class="col-lg-4 mb-4">
@@ -315,7 +424,7 @@
                             <p class="author-img">Ahmad Rifaldi</p>
                             <p class="tgl-img">20 November 2021</p>
                           </div>
-                          <a class="stretched-link lightbox" href="#previewImg"></a>
+                          <a class="stretched-link lightbox" href="detail-foto.html"></a>
                         </div>
                       </div>
                       <div class="col-lg-4 mb-4">
@@ -326,7 +435,7 @@
                             <p class="author-img">Ahmad Rifaldi</p>
                             <p class="tgl-img">20 November 2021</p>
                           </div>
-                          <a class="stretched-link lightbox" href="#previewImg"></a>
+                          <a class="stretched-link lightbox" href="detail-foto.html"></a>
                         </div>
                       </div>
                       <div class="col-lg-4 mb-4">
@@ -337,7 +446,7 @@
                             <p class="author-img">Ahmad Rifaldi</p>
                             <p class="tgl-img">20 November 2021</p>
                           </div>
-                          <a class="stretched-link lightbox" href="#previewImg"></a>
+                          <a class="stretched-link lightbox" href="detail-foto.html"></a>
                         </div>
                       </div>
                       <div class="col-lg-4 mb-4">
@@ -348,13 +457,13 @@
                             <p class="author-img">Ahmad Rifaldi</p>
                             <p class="tgl-img">20 November 2021</p>
                           </div>
-                          <a class="stretched-link lightbox" href="#previewImg"></a>
+                          <a class="stretched-link lightbox" href="detail-foto.html"></a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="tab-pane fade" id="tab-video" role="tabpanel" aria-labelledby="tab-video-tab">
-                    <div class="row">
+                    <div class="row justify-content-center">
                       <div class="col-md-12 col-lg-4 mb-4">
                         <div class="card no-border card-artikel">
                           <div class="video media-video" data-video-id="fj2xxbx_OHQ">
@@ -496,7 +605,7 @@
                     </div>
                   </div>
                   <div class="tab-pane fade" id="tab-publikasi" role="tabpanel" aria-labelledby="tab-publikasi-tab">
-                    <div class="row">
+                    <div class="row justify-content-center">
                       <div class="col-md-6 col-lg-4 mb-4">
                         <div class="card no-border card-artikel">
                           <img src="assets/img/artikel-berita/artikel-1.png" class="card-img-top" alt="...">
@@ -644,7 +753,7 @@
                     </div>
                   </div>
                   <div class="tab-pane fade" id="tab-audio" role="tabpanel" aria-labelledby="tab-audio-tab">
-                    <div class="row">
+                    <div class="row justify-content-center">
                       <div class="col-md-6 col-lg-4 mb-4">
                         <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/620692998&color=%231a150d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                         <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/ellamft" title="ellamft" target="_blank" style="color: #cccccc; text-decoration: none;">ellamft</a> · <a href="https://soundcloud.com/ellamft/luruh-isyana-sarasvati-ft-rara-sekar-cover-with-maydina" title="Luruh - Isyana Sarasvati ft. Rara Sekar (Cover with Maydina)" target="_blank" style="color: #cccccc; text-decoration: none;">Luruh - Isyana Sarasvati ft. Rara Sekar (Cover with Maydina)</a></div>
@@ -694,12 +803,6 @@
     </div>
   </div>
   <!-- End Modal -->
-  <!-- preview image -->
-  <div class="lightbox-target" id="previewImg">
-    <img src="assets/img/hero/hero-3.jpg" />
-    <a class="lightbox-close" href="#tabLine"></a>
-  </div>
-  <!-- end of preview image -->
   <footer>
     <img class="footer-bg-1" src="assets/img/asset-jelajah.png" width="50%">
     <img class="footer-bg-2" src="assets/img/asset-jelajah2.png" width="50%">
@@ -784,6 +887,34 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/js/slick.min.js"></script>
+<script>
+$(document).ready(function() {
+  if ($(window).width() <= 1000) {
+    $(".navbar").addClass("bg-nav-baru");
+    $(".navbar").removeClass("bg-trans");
+  }
+});
+$(window).scroll(function() {
+
+  if ($(window).width() >= 1000) {
+    var scroll = $(window).scrollTop();
+    //>=, not <=
+    if (scroll >= 50) {
+      //clearHeader, not clearheader - caps H
+      $(".navbar").addClass("bg-nav-baru");
+      $(".navbar").removeClass("bg-trans");
+    } else {
+      $(".navbar").addClass("bg-trans");
+      $(".navbar").removeClass("bg-nav-baru");
+    }
+  } else {
+    $(".navbar").addClass("bg-nav-baru");
+    $(".navbar").removeClass("bg-trans");
+  }
+
+}); //missing );
+</script>
 <script>
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
@@ -822,33 +953,6 @@ function initializeVideoModule(videoModule) {
 }
 </script>
 <script>
-$(document).ready(function() {
-  if ($(window).width() <= 1000) {
-    $(".navbar").addClass("bg-nav");
-    $(".navbar").removeClass("bg-trans");
-  }
-});
-$(window).scroll(function() {
-
-  if ($(window).width() >= 1000) {
-    var scroll = $(window).scrollTop();
-    //>=, not <=
-    if (scroll >= 50) {
-      //clearHeader, not clearheader - caps H
-      $(".navbar").addClass("bg-nav");
-      $(".navbar").removeClass("bg-trans");
-    } else {
-      $(".navbar").addClass("bg-trans");
-      $(".navbar").removeClass("bg-nav");
-    }
-  } else {
-    $(".navbar").addClass("bg-nav");
-    $(".navbar").removeClass("bg-trans");
-  }
-
-}); //missing );
-</script>
-<script>
 $(function() {
 
   var minimized_elements = $('p.minimize');
@@ -864,6 +968,37 @@ $(function() {
 
   });
 
+});
+</script>
+<script>
+$(document).ready(function() {
+  $('.feature').slick({
+    centerMode: true,
+    centerPadding: '300px',
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+
+    responsive: [{
+        breakpoint: 1000,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
 });
 </script>
 <script>

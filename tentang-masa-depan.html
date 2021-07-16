@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top bg-nav bg-nav-2">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top bg-nav-2">
     <div class="container-fluid container">
       <a class="navbar-brand" href="index.html">
         <img src="assets/img/logo/logo.png" width="150px">
@@ -339,6 +339,33 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="http://platform.twitter.com/widgets.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script>
+$(document).ready(function() {
+  if ($(window).width() <= 1000) {
+    $(".navbar").addClass("bg-nav");
+    $(".navbar").removeClass("bg-trans");
+  }
+});
+$(window).scroll(function() {
+
+  if ($(window).width() >= 1000) {
+    var scroll = $(window).scrollTop();
+    //>=, not <=
+    if (scroll >= 50) {
+      //clearHeader, not clearheader - caps H
+      $(".navbar").addClass("bg-nav");
+      $(".navbar").removeClass("bg-trans");
+    } else {
+      $(".navbar").addClass("bg-trans");
+      $(".navbar").removeClass("bg-nav");
+    }
+  } else {
+    $(".navbar").addClass("bg-nav");
+    $(".navbar").removeClass("bg-trans");
+  }
+
+}); //missing );
+</script>
 <script>
 $("#selectLokasi").select2({
   placeholder: "Pilih Lokasi",

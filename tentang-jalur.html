@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top bg-nav bg-nav-2">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top bg-nav-2">
     <div class="container-fluid container">
       <a class="navbar-brand" href="index.html">
         <img src="assets/img/logo/logo.png" width="150px">
@@ -66,25 +66,27 @@
   </nav>
   <header id="hero">
     <img class="hero-img-2 hero-peta " src="https://jalurrempah.kemdikbud.go.id/wp-content/uploads/2020/09/Peta-indonesia-u-JR.jpg">
+    <div class="wrap-hero-text">
+      <div class="row">
+        <div class="col-md-4">
+          <header>
+            <h2 class="sub-judul sub-judul-hero">Titik-Titik Jalur Rempah</h2>
+          </header>
+          <p>Jalur Rempah mencakup berbagai lintasan dari timur Asia hingga barat Eropa terhubung dengan Benua Amerika, Afrika dan Australia. Suatu lintasan peradaban bermacam bentuk, garis lurus, lingkaran, silang, bahkan berbentuk jejaring.<span id="dots">...</span><span id="more"><br><br>
+              Di Indonesia, wujud rute perniagaan rempah mencakup banyak hal. Tidak hanya berdiri di satu titik penghasil rempah, namun juga mencakup berbagai titik yang bisa dijumpai di Indonesia dan membentuk suatu lintasan peradaban yang berkelanjutan.<br><br>
+              Program Jalur Rempah melihat kembali lintasan rute perdagangan rempah dari satu titik ke titik lainnya, menghidupkan kembali beragam kisahnya, menghubungkan kembali berbagai jejaknya.<br><br>
+              Menghidupkan kembali narasi sejarah yang umumnya tidak memperlihatkan peran orang Indonesia dalam pembentukan Jalur Rempah.<br><br>
+              Program ini bertekad keras mencatat peran mereka yang berada di titik-titik perdagangan rempah, menghubungkan serangkaian benang merah yang belum terdokumentasikan dan tampak samar-samar dalam narasi sejarah.</span></p>
+            <button class="btn btn-sm btn-outline-secondary" onclick="readMore()" id="myBtn">Read more</button>
+        </div>
+      </div>
+    </div>
   </header>
   <main>
     <div id="content">
       <section id="sejarahRempah">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <header>
-                <h2 class="sub-judul">Titik-Titik Jalur Rempah</h2>
-              </header>
-              <section id="desTentang">
-                <p>Jalur Rempah mencakup berbagai lintasan dari timur Asia hingga barat Eropa terhubung dengan Benua Amerika, Afrika dan Australia. Suatu lintasan peradaban bermacam bentuk, garis lurus, lingkaran, silang, bahkan berbentuk jejaring.</p>
-                <p>Di Indonesia, wujud rute perniagaan rempah mencakup banyak hal. Tidak hanya berdiri di satu titik penghasil rempah, namun juga mencakup berbagai titik yang bisa dijumpai di Indonesia dan membentuk suatu lintasan peradaban yang berkelanjutan.</p>
-                <p>Program Jalur Rempah melihat kembali lintasan rute perdagangan rempah dari satu titik ke titik lainnya, menghidupkan kembali beragam kisahnya, menghubungkan kembali berbagai jejaknya.</p>
-                <p>Menghidupkan kembali narasi sejarah yang umumnya tidak memperlihatkan peran orang Indonesia dalam pembentukan Jalur Rempah.</p>
-                <p>Program ini bertekad keras mencatat peran mereka yang berada di titik-titik perdagangan rempah, menghubungkan serangkaian benang merah yang belum terdokumentasikan dan tampak samar-samar dalam narasi sejarah.</p>
-
-              </section>
-            </div>
+          <div class="justify-content-center">
             <section id="artikelTentang">
               <div class="row justify-content-center">
                 <div class="col-lg-11">
@@ -170,7 +172,6 @@
                             <p class="des-artikel des-artikel-tentang minimize">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's on..</p>
                           </div>
                         </div>
-
                         <a href="detail-berita.html" class="stretched-link"></a>
                       </div>
                     </div>
@@ -336,6 +337,33 @@
 <script src="http://platform.twitter.com/widgets.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <script>
+$(document).ready(function() {
+  if ($(window).width() <= 1000) {
+    $(".navbar").addClass("bg-nav");
+    $(".navbar").removeClass("bg-trans");
+  }
+});
+$(window).scroll(function() {
+
+  if ($(window).width() >= 1000) {
+    var scroll = $(window).scrollTop();
+    //>=, not <=
+    if (scroll >= 50) {
+      //clearHeader, not clearheader - caps H
+      $(".navbar").addClass("bg-nav");
+      $(".navbar").removeClass("bg-trans");
+    } else {
+      $(".navbar").addClass("bg-trans");
+      $(".navbar").removeClass("bg-nav");
+    }
+  } else {
+    $(".navbar").addClass("bg-nav");
+    $(".navbar").removeClass("bg-trans");
+  }
+
+}); //missing );
+</script>
+<script>
 $("#selectLokasi").select2({
   placeholder: "Pilih Lokasi",
   allowClear: true
@@ -376,6 +404,23 @@ $(document).ready(function() {
     }
   });
 });
+</script>
+<script>
+function readMore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
 </script>
 
 </html>

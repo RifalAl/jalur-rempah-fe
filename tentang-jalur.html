@@ -16,15 +16,15 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top bg-nav-2">
-    <div class="container-fluid container">
+    <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="assets/img/logo/logo.png" width="150px">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link " aria-current="page" href="index.html">Beranda</a>
           </li>
@@ -45,21 +45,15 @@
             <a class="nav-link" href="informasi.html">Informasi</a>
           </li>
         </ul>
-        <div class="wrap-menu-right row" style="">
-          <div class="col-2 col-md-8 text-right">
-            <button class="btn icon-search" data-bs-toggle="modal" data-bs-target="#searchModal">
-              <i class="fa fa-search clr-white"></i>
-            </button>
-          </div>
-          <div class="col-1 col-md-1 text-right">
-            <img for="selectLanguage" id="languageFlag" src="assets/img/bendera/flag-indonesia.png" width="60%">
-          </div>
-          <div class="col-3 col-md-3">
-            <select id="selectLanguage" class="form-select form-select-language" aria-label="Default select example">
-              <option value="idn">INA</option>
-              <option value="eng">ENG</option>
-            </select>
-          </div>
+        <div class="d-flex wrap-side-navbar">
+          <button class="btn icon-search mr-4" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <i class="fa fa-search clr-white"></i>
+          </button>
+          <img class="language-flag mr-2" for="selectLanguage" id="languageFlag" src="assets/img/bendera/flag-indonesia.png">
+          <select id="selectLanguage" class="form-select form-select-language" aria-label="Default select example">
+            <option value="idn">INA</option>
+            <option value="eng">ENG</option>
+          </select>
         </div>
       </div>
     </div>
@@ -77,7 +71,7 @@
               Program Jalur Rempah melihat kembali lintasan rute perdagangan rempah dari satu titik ke titik lainnya, menghidupkan kembali beragam kisahnya, menghubungkan kembali berbagai jejaknya.<br><br>
               Menghidupkan kembali narasi sejarah yang umumnya tidak memperlihatkan peran orang Indonesia dalam pembentukan Jalur Rempah.<br><br>
               Program ini bertekad keras mencatat peran mereka yang berada di titik-titik perdagangan rempah, menghubungkan serangkaian benang merah yang belum terdokumentasikan dan tampak samar-samar dalam narasi sejarah.</span></p>
-            <button class="btn btn-sm btn-outline-secondary" onclick="readMore()" id="myBtn">Read more</button>
+          <button class="btn btn-sm btn-outline-secondary" onclick="readMore()" id="myBtn">Read more</button>
         </div>
       </div>
     </div>

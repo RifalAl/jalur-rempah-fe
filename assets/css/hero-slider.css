@@ -25,14 +25,15 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  text-align: center;
+  /*text-align: center;*/
 }
 .hero-slider .carousel-cell .slide-content .title {
   position: relative;
-
-  font-size: 3.2rem;
+  font-weight: 500;
+  font-size: 4.4rem;
   letter-spacing: 3px;
-  text-transform: uppercase;
+  line-height: 1;
+  /*text-transform: uppercase;*/
   color: #ffffff;
 }
 .hero-slider .carousel-cell .slide-content .caption {

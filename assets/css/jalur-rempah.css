@@ -8,6 +8,10 @@ body {
   overflow-x: hidden;
 }
 
+a:hover {
+  color: salmon;
+}
+
 .center-v {
   margin-top: auto;
   margin-bottom: auto;
@@ -903,7 +907,7 @@ footer {
   margin-top: -5px;
 }
 
-.form-select-language-beranda{
+.form-select-language-beranda {
   margin-top: -5px;
 }
 
@@ -1237,7 +1241,7 @@ footer {
 
 .mask {
   padding-left: 5rem;
-  padding-right: 5rem;
+  padding-right: 30vw;
 }
 
 /*PAGINATION*/
@@ -1293,11 +1297,101 @@ footer {
   z-index: 0;
 }
 
-.language-flag{
-    height: 15px;
-    margin-top: 6px;
-  }
+.language-flag {
+  height: 15px;
+  margin-top: 6px;
+}
 
+.wilayah {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.wrap-tag-rempah {
+  font-size: 12px;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 90vh;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+#kontributor {
+  position: relative;
+}
+
+.wrap-text-kontributor {
+  position: absolute;
+  width: 100%;
+  padding: 10px 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.wrap-img-kontributor img {
+  width: 100vw;
+  height: 500px;
+  object-fit: cover;
+}
+
+.no-padding {
+  padding: 0px;
+}
+
+.btn-primary-jarem {
+  background-color: #CBAB59;
+  border-color: #CBAB59;
+}
+
+.btn-daftar {
+  background-color: #CBAB59;
+  border-color: #CBAB59;
+}
+
+.btn-daftar .fa {
+  margin-left: 1rem;
+}
+
+
+.btn-primary-jarem:hover {
+  background-color: #FEF8E9;
+  border-color: #FEF8E9;
+  color: #202020;
+}
+
+#img-login {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.wrap-form-daftar {
+  padding: 25px;
+  padding-right: 50px;
+}
+
+.sub-judul-form {
+  font-size: 18px;
+}
+
+.des-form-daftar {
+  font-size: 12px;
+  color: gray;
+}
+
+.icon-group {
+  background-color: #CBAB59;
+  border-color: #CBAB59;
+  color: white;
+}
+
+.logo-daftar {
+  width: 30%;
+}
 
 
 @media (max-width: 991.98px) {
@@ -1451,10 +1545,22 @@ footer {
     display: block;
   }
 
-  .form-select-language-beranda{
+  .form-select-language-beranda {
     margin-top: 0px;
   }
 
+  .wrap-img-daftar {
+    display: none;
+  }
+
+  .wrap-form-daftar {
+    padding: 30px;
+  }
+
+
+  .logo-daftar {
+    width: 30%;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -1564,6 +1670,11 @@ footer {
   .wrap-hero-text {
     top: 13%;
     left: .5rem;
+  }
+
+
+  .logo-daftar {
+    width: 50%;
   }
 
 

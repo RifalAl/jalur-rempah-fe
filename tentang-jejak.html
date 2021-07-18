@@ -85,10 +85,9 @@
           <div class="mb-3 row wrap-select">
             <div class="col-lg-5 mb-3">
               <select id="selectLokasi" class="form-select" aria-label="Default select example">
-                <option selected>Pilih Lokasi</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option selected>Pilih Kategori</option>
+                <option value="wilayah">Wilayah</option>
+                <option value="rempah">Jenis Rempah</option>
               </select>
             </div>
             <div class="col-lg-5 mb-3">
@@ -502,18 +501,6 @@ $(function() {
 
 });
 </script>
-<script>
-$(document).ready(function() {
-  $('#selectLanguage').change(function() {
-    var language = $("#selectLanguage option:selected").text();
-    console.log(language);
-    if (language == "INA") {
-      $("#languageFlag").attr("src", "assets/img/bendera/flag-indonesia.png");
-    } else {
-      $("#languageFlag").attr("src", "assets/img/bendera/flag-english.png");
-    }
-  });
-});
-</script>
+
 
 </html>

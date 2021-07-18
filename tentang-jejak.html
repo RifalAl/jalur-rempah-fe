@@ -46,14 +46,33 @@
           </li>
         </ul>
         <div class="d-flex wrap-side-navbar">
+          <div class="wrap-language">
+            <ul class="link-bahasa">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="assets/img/bendera/flag-indonesia.png" class="mr-2 flag" width="20px"> INA
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="index.html">
+                      <img src="assets/img/bendera/flag-indonesia.png" class="mr-2 flag" width="20px"> INA
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <img src="assets/img/bendera/flag-english.png" class="mr-2 flag" width="20px"> ENG
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="btn icon-search mr-4" data-bs-toggle="modal" data-bs-target="#searchModal">
             <i class="fa fa-search clr-white"></i>
           </button>
-          <img class="language-flag mr-2" for="selectLanguage" id="languageFlag" src="assets/img/bendera/flag-indonesia.png">
-          <select id="selectLanguage" class="form-select form-select-language" aria-label="Default select example">
-            <option value="idn">INA</option>
-            <option value="eng">ENG</option>
-          </select>
+          <a href="login.html" class="btn btn-danger mr-4" style="margin-right:1rem">
+            Masuk
+          </a>
         </div>
       </div>
     </div>

@@ -1394,6 +1394,12 @@ footer {
   width: 30%;
 }
 
+.link-bahasa .nav-link{
+  color: white;
+  font-size: 16px;
+  padding: .5rem 0rem;
+}
+
 
 @media (max-width: 991.98px) {
 
@@ -1561,6 +1567,10 @@ footer {
 
   .logo-daftar {
     width: 30%;
+  }
+
+  .wrap-side-navbar{
+    padding-bottom: 5px;
   }
 }
 

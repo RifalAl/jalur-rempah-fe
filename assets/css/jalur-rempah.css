@@ -814,8 +814,7 @@ footer {
 }
 
 .wrap-hero-text p {
-  font-size: 13px;
-  transition: all .5 ease;
+  font-size: 12px;
 }
 
 #more {
@@ -1411,6 +1410,16 @@ footer {
   color: #202020 !important;
 }
 
+
+.list-group-item{
+  background-color: transparent;
+  border-color: transparent;
+  padding: .4rem;
+}
+
+.list-group-item:hover img{
+  transition: scale(1.1);
+}
 
 
 

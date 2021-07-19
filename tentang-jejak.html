@@ -79,6 +79,20 @@
   </nav>
   <header id="hero">
     <div id="map"></div>
+    <div class="wrap-hero-text">
+      <div class="row">
+        <div class="col-md-4">
+          <header>
+            <h2 class="sub-judul sub-judul-hero">Jejak dan Jalur Rempah</h2>
+          </header>
+          <p>Jalur Rempah merupakan sebutan untuk suatu peradaban yang sangat tua, kompleks, dan luas. Jalurnya merupakan jalur budaya; terbentang dari timur Asia hingga barat Eropa, terhubung dengan Benua Amerika, Afrika dan Australia; dan mempengaruhi peradaban global.<span id="dots">...</span><span id="more"><br><br>
+              Kita dapat melihat peran aktif masyarakat Nusantara dalam pembentukkan peradaban ini. Baik sebagai produsen rempah yang menggerakkan perdagangan lintas batas, maupun sebagai masyarakat yang terbuka bagi banyak bangsa (pendatang) yang memiliki latar belakang budaya yang berbeda.<br><br>
+              Keterbukaan masyarakat dan hubungan budaya yang melahirkan beragam warisan budaya multikultural dan multietnis ke berbagai medium, termasuk hubungan lintas lautan di dalamnya, menjadi suatu keniscayaan. Tidak hanya antar bangsa, tetapi juga antar sukubangsa. Hubungan budaya antar manusia lintas lautan meninggalkan jejak, dan rangkaian jejak lintas wilayah inilah yang sekaligus membangun jalur.<br><br>
+              Setiap warisan memiliki nilai budaya yang disimpan dalam berbagai bentuk. Kisah asal usul, nyanyian, musik, tarian, teknologi tradisional, arsitektur bangunan, kepercayaan dan banyak lainnya. Simpanan nilai budaya yang menjadi memori kolektif ini sekaligus menjadi bukti dan jejak Jalur Rempah.</span></p>
+          <button class="btn btn-sm btn-outline-secondary" onclick="readMore()" id="myBtn">Read more</button>
+        </div>
+      </div>
+    </div>
     <div class="text-hero-2 input-hero">
       <div class="row justify-content-center">
         <div class="col-11 col-md-10 col-lg-7">
@@ -359,18 +373,26 @@
         </div>
         <div class="col-12 col-md-6 col-lg-2 mb-4 footer-content">
           <h3 class="menu-footer">MEDIA SOSIAL</h3>
-          <ul>
-            <li>
-              <a target="_blank" href="https://web.facebook.com/jalurrempahri">Facebook</a>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">
+              <a target="_blank" href="https://web.facebook.com/jalurrempahri">
+                <img src="assets/img/icon-media-sosial/icon-facebook.png" width="25px">
+              </a>
             </li>
-            <li>
-              <a target="_blank" href="https://www.youtube.com/channel/UCyhHsv7jCOiE12pGXbkINoA">Youtube</a>
+            <li class="list-group-item">
+              <a target="_blank" href="https://www.youtube.com/channel/UCyhHsv7jCOiE12pGXbkINoA">
+                <img src="assets/img/icon-media-sosial/icon-youtube.png" width="25px">
+              </a>
             </li>
-            <li>
-              <a target="_blank" href="https://www.instagram.com/jalurrempahri/?hl=id">Instagram</a>
+            <li class="list-group-item">
+              <a target="_blank" href="https://www.instagram.com/jalurrempahri/?hl=id">
+                <img src="assets/img/icon-media-sosial/icon-instagram.png" width="25px">
+              </a>
             </li>
-            <li>
-              <a target="_blank" href="https://twitter.com/JalurrempahRI">Twitter</a>
+            <li class="list-group-item">
+              <a target="_blank" href="https://twitter.com/JalurrempahRI">
+                <img src="assets/img/icon-media-sosial/icon-twitter.png" width="25px">
+              </a>
             </li>
           </ul>
         </div>
@@ -497,6 +519,23 @@ $(function() {
   });
 
 });
+</script>
+<script>
+function readMore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
 </script>
 
 </html>

@@ -172,11 +172,16 @@ section {
 
 #sosialMedia,
 #sejarahRempah,
-#mediaJalurRempah {
+#mediaJalurRempah,
+#kontenJejak {
   background-color: white;
   padding-top: 70px;
   padding-bottom: 70px;
   background-image: linear-gradient(rgba(245, 233, 206, .1), rgba(245, 233, 206, 1));
+}
+
+#kontenJejak{
+  padding-top: 0px;
 }
 
 

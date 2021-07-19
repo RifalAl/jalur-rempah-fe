@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="assets/css/jalur-rempah.css">
   <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
   <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/jalur-rempah.css">
   <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
   <title>Jalur Rempah</title>
   <link rel="shortcut icon" href="assets/img/logo/favicon.png">
@@ -47,14 +47,33 @@
           </li>
         </ul>
         <div class="d-flex wrap-side-navbar">
+          <div class="wrap-language">
+            <ul class="link-bahasa">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle clr-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="assets/img/bendera/flag-indonesia.png" class="mr-2 flag" width="20px"> INA
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="index.html">
+                      <img src="assets/img/bendera/flag-indonesia.png" class="mr-2 flag" width="20px"> INA
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <img src="assets/img/bendera/flag-english.png" class="mr-2 flag" width="20px"> ENG
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <button class="btn icon-search mr-4" data-bs-toggle="modal" data-bs-target="#searchModal">
             <i class="fa fa-search clr-black"></i>
           </button>
-          <img class="language-flag mr-2" for="selectLanguage" id="languageFlag" src="assets/img/bendera/flag-indonesia.png">
-          <select id="selectLanguage" class="form-select form-select-language clr-black" aria-label="Default select example">
-            <option value="idn">INA</option>
-            <option value="eng">ENG</option>
-          </select>
+          <a href="login.html" class="btn btn-danger mr-4" style="margin-right:1rem">
+            Masuk
+          </a>
         </div>
       </div>
     </div>
@@ -66,7 +85,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-12">
               <header class="mb-2">
-                <h2 class="sub-judul text-center">Feature</h2>
+                <h2 class="sub-judul text-center">Terbaru</h2>
               </header>
               <div class="feature">
                 <div>
@@ -804,7 +823,7 @@
       <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-3 footer-content mb-4">
           <img class="logo-footer" src="assets/img/logo-footer.png" width="70%">
-          <p class="footer-alamat">Kompleks Kementerian Pendidikan, Kebudayaan, Riset dan Teknologi, Jalan Jenderal Sudirman, Senayan, Jakarta 10270</p>
+          <p class="footer-alamat">Kompleks Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi, Jalan Jenderal Sudirman, Senayan, Jakarta 10270</p>
         </div>
         <div class="col-12 col-md-6 col-lg-3 mb-4 footer-content">
           <h3 class="menu-footer mb-4">KONTAK</h3>
@@ -855,7 +874,7 @@
           </ul>
         </div>
         <div class="col-12 col-md-6 col-lg-2 mb-4 footer-content">
-          <h3 class="menu-footer">SOCIAL MEDIA</h3>
+          <h3 class="menu-footer">MEDIA SOSIAL</h3>
           <ul>
             <li>
               <a target="_blank" href="https://web.facebook.com/jalurrempahri">Facebook</a>
@@ -876,7 +895,7 @@
     <div class="wrap-footer-down">
       <div class="row text-center">
         <div class="col-12">
-          <p>Copyright © Jalur Rempah Kementrian Pendidikan RI 2021</p>
+          <p>Copyright © Jalur Rempah Kementerian Pendidikan RI 2021</p>
         </div>
       </div>
     </div>
@@ -974,8 +993,7 @@ $(document).ready(function() {
     centerPadding: '300px',
     slidesToShow: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
-
+    autoplaySpeed: 9000,
     responsive: [{
         breakpoint: 1000,
         settings: {
@@ -998,6 +1016,5 @@ $(document).ready(function() {
   });
 });
 </script>
-
 
 </html>

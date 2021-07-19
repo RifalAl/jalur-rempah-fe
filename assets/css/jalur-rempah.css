@@ -922,9 +922,6 @@ footer {
   padding: 0px;
 }
 
-.clr-black {
-  color: #202020;
-}
 
 /*timeline*/
 .timeline {
@@ -1242,6 +1239,11 @@ footer {
 .slick-prev:before,
 .slick-next:before {
   color: #8B7D5D;
+  font-size: 32px;
+}
+
+.slick-prev {
+    left: -35px;
 }
 
 .mask {
@@ -1403,6 +1405,10 @@ footer {
   color: white;
   font-size: 16px;
   padding: .5rem 0rem;
+}
+
+.clr-black {
+  color: #202020 !important;
 }
 
 

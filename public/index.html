@@ -11,7 +11,8 @@
   <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
   <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/hero-slider.css">
   <link rel="stylesheet" type="text/css" href="assets/css/jalur-rempah.css">
   <title>Jalur Rempah</title>
@@ -78,41 +79,64 @@
     </div>
   </nav>
   <header id="hero">
-    <div class="hero-slider" data-carousel>
-      <div class="carousel-cell" style="background-image:url(assets/img/hero/hero-1.jpg);">
-        <div class="overlay"></div>
-        <div class="slide-content">
-          <div class="mask">
-            <h2 class="title">Jalur Rempah</h2>
+    <section class="hero-slider hero-style">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide-inner slide-bg-image" data-background="assets/img/hero/hero-1.jpg">
+              <div class="container">
+                <div data-swiper-parallax="300" class="slide-title">
+                  <h2 class="title">Jalur Rempah</h2>
+                </div>
+                <div data-swiper-parallax="400" class="slide-text">
+                  <p class="caption">Penggalian kembali ekosistem bahari yang berdiri dari jalur dan jejak masa lampau. Suatu sudut pandang dan fondasi dari masa lalu sebagai masa kini. Rangkaian ingatan kolektif sebagai pengetahuan dalam membangun masa depan.</p>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <!-- end slide-inner -->
           </div>
-          <div class="mask">
-            <p class="caption">Penggalian kembali ekosistem bahari yang berdiri dari jalur dan jejak masa lampau. Suatu sudut pandang dan fondasi dari masa lalu sebagai masa kini. Rangkaian ingatan kolektif sebagai pengetahuan dalam membangun masa depan.</p>
+          <!-- end swiper-slide -->
+          <div class="swiper-slide">
+            <div class="slide-inner slide-bg-image" data-background="assets/img/hero/hero-2.jpg">
+              <div class="container">
+                <div data-swiper-parallax="300" class="slide-title">
+                  <h2 class="title">Jalur Rempah</h2>
+                </div>
+                <div data-swiper-parallax="400" class="slide-text">
+                  <p class="caption">Penggalian kembali ekosistem bahari yang berdiri dari jalur dan jejak masa lampau. Suatu sudut pandang dan fondasi dari masa lalu sebagai masa kini. Rangkaian ingatan kolektif sebagai pengetahuan dalam membangun masa depan.</p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
           </div>
+          <!-- end slide-inner -->
+          <!-- end swiper-slide -->
+          <div class="swiper-slide">
+            <div class="slide-inner slide-bg-image" data-background="assets/img/hero/hero-3.jpg">
+              <div class="container">
+                <div data-swiper-parallax="300" class="slide-title">
+                  <h2 class="title">Jalur Rempah</h2>
+                </div>
+                <div data-swiper-parallax="400" class="slide-text">
+                  <p class="caption">Penggalian kembali ekosistem bahari yang berdiri dari jalur dan jejak masa lampau. Suatu sudut pandang dan fondasi dari masa lalu sebagai masa kini. Rangkaian ingatan kolektif sebagai pengetahuan dalam membangun masa depan.</p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <!-- end slide-inner --><img src="">
         </div>
+        <!-- end swiper-slide -->
       </div>
-      <div class="carousel-cell" style="background-image:url(assets/img/hero/hero-2.jpg);">
-        <div class="overlay"></div>
-        <div class="slide-content">
-          <div class="mask">
-            <h2 class="title">Jalur Rempah</h2>
-          </div>
-          <div class="mask">
-            <p class="caption">Penggalian kembali ekosistem bahari yang berdiri dari jalur dan jejak masa lampau. Suatu sudut pandang dan fondasi dari masa lalu sebagai masa kini. Rangkaian ingatan kolektif sebagai pengetahuan dalam membangun masa depan.</p>
-          </div>
-        </div>
+      <!-- end swiper-wrapper -->
+      <!-- swipper controls -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
       </div>
-      <div class="carousel-cell" style="background-image:url(assets/img/hero/hero-3.jpg);">
-        <div class="overlay"></div>
-        <div class="slide-content">
-          <div class="mask">
-            <h2 class="title">Jalur Rempah</h2>
-          </div>
-          <div class="mask">
-            <p class="caption">Penggalian kembali ekosistem bahari yang berdiri dari jalur dan jejak masa lampau. Suatu sudut pandang dan fondasi dari masa lalu sebagai masa kini. Rangkaian ingatan kolektif sebagai pengetahuan dalam membangun masa depan.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
+    <!-- end of hero slider -->
   </header>
   <main>
     <div id="content">
@@ -720,7 +744,8 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script type="text/javascript" src="assets/js/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.0/flickity.pkgd.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.0/flickity.pkgd.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script src="http://platform.twitter.com/widgets.js"></script>
 <script>
 $(document).ready(function() {
@@ -941,6 +966,72 @@ $(".page-scroll").on('click', function(e) {
   }, 500);
   e.preventDefault();
 })
+</script>
+<script>
+// HERO SLIDER
+var menu = [];
+jQuery('.swiper-slide').each(function(index) {
+  menu.push(jQuery(this).find('.slide-inner').attr("data-text"));
+});
+var interleaveOffset = 0.5;
+var swiperOptions = {
+  loop: true,
+  speed: 1000,
+  parallax: true,
+  autoplay: {
+    delay: 6500,
+    disableOnInteraction: false,
+  },
+  watchSlidesProgress: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  on: {
+    progress: function() {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        var slideProgress = swiper.slides[i].progress;
+        var innerOffset = swiper.width * interleaveOffset;
+        var innerTranslate = slideProgress * innerOffset;
+        swiper.slides[i].querySelector(".slide-inner").style.transform =
+          "translate3d(" + innerTranslate + "px, 0, 0)";
+      }
+    },
+
+    touchStart: function() {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        swiper.slides[i].style.transition = "";
+      }
+    },
+
+    setTransition: function(speed) {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        swiper.slides[i].style.transition = speed + "ms";
+        swiper.slides[i].querySelector(".slide-inner").style.transition =
+          speed + "ms";
+      }
+    }
+  }
+};
+
+var swiper = new Swiper(".swiper-container", swiperOptions);
+
+// DATA BACKGROUND IMAGE
+var sliderBgSetting = $(".slide-bg-image");
+sliderBgSetting.each(function(indx) {
+  if ($(this).attr("data-background")) {
+    $(this).css("background-image", "url(" + $(this).data("background") + ")");
+  }
+});
 </script>
 
 </html>

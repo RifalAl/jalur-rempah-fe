@@ -11,13 +11,13 @@
   <!-- Custom fonts for this template-->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css">
   <link href="assets/css/my-style.css" rel="stylesheet">
   <link rel="shortcut icon" href="assets/img/logo/favicon.png">
-</head>
 </head>
 
 <body id="page-top">
@@ -123,174 +123,116 @@
         <!-- Begin Page Content -->
         <div class="container-fluid" id="contentWrapper">
           <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <!-- <h1 class="h3 mb-0 text-gray-800 judul">Konten Artikel</h1> -->
-          </div>
           <div class="row">
             <div class="col-lg-12 mb-3">
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Bahasa</h2>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="mb-3">
-                      <label for="judulArtikelBahasa" class="form-label">Judul</label>
-                      <input type="text" class="form-control" id="judulArtikelBahasa" placeholder="masukkan judul artikel">
+                  <div class="row">
+                    <div class="col-6">
+                      <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">List Video</h2>
                     </div>
-                    <div class="mb-3">
-                      <label for="isiArtikelBahasa" class="form-label">Isi Konten</label>
-                      <textarea class="form-control" id="isiArtikelBahasa" rows="8"></textarea>
+                    <div class="col-6 text-end">
+                      <a href="tambah-konten-video.html" class="btn btn-primary">
+                        <i class="fa fa-plus mr-1"></i> Tambah
+                      </a>
                     </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12 mb-3">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">English</h2>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="mb-3">
-                      <label for="judulArtikelEnglish" class="form-label">Judul</label>
-                      <input type="text" class="form-control" id="judulArtikelEnglish" placeholder="masukkan judul artikel">
-                    </div>
-                    <div class="mb-3">
-                      <label for="isiArtikelEnglish" class="form-label">Isi Konten</label>
-                      <textarea class="form-control" id="isiArtikelEnglish" rows="8"></textarea>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12 mb-3">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Key</h2>
-                </div>
-                <div class="card-body ">
-                  <div class="mb-3">
-                    <label for="youtubeKey" class="form-label">Youtube Key</label>
-                    <input type="text" class="form-control" id="youtubeKey" placeholder="masukkan youtube key">
-                    <small class="ml-1">Key di dapatkan dari embed code video youtube</small>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-12 mb-3">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Tag Artikel</h2>
-                </div>
                 <div class="card-body">
-                  <form>
-                    <div class="mb-3">
-                      <label for="lokasiArtikel" class="form-label">Lokasi</label>
-                      <select id="pilihLokasi" class="form-select select2-style" aria-label="Default select example">
-                        <option selected>Pilih Lokasi</option>
-                        <option value="1">Lokasi 1</option>
-                        <option value="2">Lokasi 2</option>
-                        <option value="3">Lokasi 3</option>
-                        <option value="4">Lokasi 4</option>
-                        <option value="5">Lokasi 5</option>
-                      </select>
-                    </div>
-                    <div class="mb-3">
-                      <label for="isiArtikelEnglish" class="form-label">Jenis Rempah</label>
-                      <div class="px-3 row">
-                        <div class="col-lg-4">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                              Jenis Rempah 1
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckChecked">
-                              Jenis Rempah 2
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                              Jenis Rempah 1
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckChecked">
-                              Jenis Rempah 2
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                              Jenis Rempah 1
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckChecked">
-                              Jenis Rempah 2
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                              Jenis Rempah 1
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckChecked">
-                              Jenis Rempah 2
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                              Jenis Rempah 1
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckChecked">
-                              Jenis Rempah 2
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                              Jenis Rempah 1
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckChecked">
-                              Jenis Rempah 2
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
+                  <table id="listArtikel" class="table" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>No.</th>
+                        <th>Judul Artikel</th>
+                        <th>Penulis</th>
+                        <th>Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#</td>
+                        <td>Lorem Ipsum Lorem Ipsum Lorem Ipsum</td>
+                        <td>Anonim</td>
+                        <td>
+                          <a href="../public/detail-foto.html" class="btn btn-sm btn-outline-primary">
+                            View
+                          </a>
+                          <a href="edit-konten-video.html" class="btn btn-sm btn-outline-info">
+                            Edit
+                          </a>
+                          <button class="btn btn-sm btn-outline-danger btn-hapus">
+                            Hapus
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Anonim</td>
+                        <td>
+                          <a href="../public/detail-foto.html" class="btn btn-sm btn-outline-primary">
+                            View
+                          </a>
+                          <a href="edit-konten-video.html" class="btn btn-sm btn-outline-info">
+                            Edit
+                          </a>
+                          <button class="btn btn-sm btn-outline-danger btn-hapus">
+                            Hapus
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#</td>
+                        <td>Source undefine</td>
+                        <td>Anonim</td>
+                        <td>
+                          <a href="../public/detail-foto.html" class="btn btn-sm btn-outline-primary">
+                            View
+                          </a>
+                          <a href="edit-konten-video.html" class="btn btn-sm btn-outline-info">
+                            Edit
+                          </a>
+                          <button class="btn btn-sm btn-outline-danger btn-hapus">
+                            Hapus
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#</td>
+                        <td>Source undefine</td>
+                        <td>Anonim</td>
+                        <td>
+                          <a href="../public/detail-foto.html" class="btn btn-sm btn-outline-primary">
+                            View
+                          </a>
+                          <a href="edit-konten-video.html" class="btn btn-sm btn-outline-info">
+                            Edit
+                          </a>
+                          <button class="btn btn-sm btn-outline-danger btn-hapus">
+                            Hapus
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#</td>
+                        <td>Source undefine</td>
+                        <td>Anonim</td>
+                        <td>
+                          <a href="../public/detail-foto.html" class="btn btn-sm btn-outline-primary">
+                            View
+                          </a>
+                          <a href="edit-konten-video.html" class="btn btn-sm btn-outline-info">
+                            Edit
+                          </a>
+                          <button class="btn btn-sm btn-outline-danger btn-hapus">
+                            Hapus
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-12 mb-5 text-center">
-              <button class="btn btn-lg btn-secondary mr-3">
-                Save as Draft
-              </button>
-              <button class="btn btn-lg btn-success">
-                Publish
-              </button>
             </div>
           </div>
         </div>
@@ -339,6 +281,9 @@
   <!-- Core plugin JavaScript-->
   <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- Custom scripts for all pages-->
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="assets/js/sb-admin-2.min.js"></script>
   <script>
   $("#sidebarToggle").click(function() {
@@ -349,60 +294,47 @@
   });
   </script>
   <script>
-  $("#pilihLokasi").select2({
-    placeholder: "Pilih Jenis Rempah",
-    allowClear: true
+  $(document).ready(function() {
+    var t = $('#listArtikel').DataTable({
+      "columnDefs": [{
+        "searchable": false,
+        "orderable": false,
+        "targets": [0, 3]
+      }],
+      "order": [
+        [1, 'asc']
+      ]
+    });
+
+    t.on('order.dt search.dt', function() {
+      t.column(0, { search: 'applied', order: 'applied' }).nodes().each(function(cell, i) {
+        cell.innerHTML = i + 1;
+      });
+    }).draw();
   });
   </script>
   <script>
-  window.onload = function() {
-    //Check File API support
-    if (window.File && window.FileList && window.FileReader) {
-      var filesInput = document.getElementById("files");
-
-      filesInput.addEventListener("change", function(event) {
-
-        var files = event.target.files; //FileList object
-        var output = document.getElementById("result");
-
-        for (var i = 0; i < files.length; i++) {
-          var file = files[i];
-
-          //Only pics
-          if (!file.type.match('image'))
-            continue;
-
-          var picReader = new FileReader();
-
-          picReader.addEventListener("load", function(event) {
-
-            var picFile = event.target;
-
-            var div = document.createElement("div");
-
-            div.className = "col-lg-4";
-
-            div.innerHTML = "<img class='output_multiple_image mb-3' src='" + picFile.result + "'" +
-              "title='" + picFile.name + "'/>";
-
-            output.insertBefore(div, null);
-
-          });
-
-          //Read the image
-          picReader.readAsDataURL(file);
-        }
-
-      });
-      $("#btnReset").on("click", function() {
-        // console.log($(this).attr('src'));
-        $("#result div").remove();
-      });
-    } else {
-      console.log("Your browser does not support File API");
-    }
-  }
+  $(document).on('click', '.btn-hapus', function(e) {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
+  });
   </script>
+</body>
 </body>
 
 </html>

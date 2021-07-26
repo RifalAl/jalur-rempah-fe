@@ -1464,6 +1464,10 @@ footer {
   min-height: 100vh;
 }
 
+.txt-penulis{
+  font-size: 14px;
+  color: gray;
+}
 
 
 @media (max-width: 991.98px) {

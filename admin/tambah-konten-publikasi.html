@@ -53,20 +53,19 @@
           </div>
         </div>
       </li>
-      <!-- Divider -->
-        <hr class="sidebar-divider">
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwoa" aria-expanded="false" aria-controls="collapseTwoa">
-            <i class="fas fa-fw fa-th-large"></i>
-            <span>Informasi</span>
-          </a>
-          <div id="collapseTwoa" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
-            <div class="bg-submenu-nav py-2 collapse-inner rounded">
-              <a class="collapse-item" href="#"><i class="fas fa-fw fa-newspaper mr-1"></i> Kegiatan</a>
-              <a class="collapse-item" href="#"><i class="fas fa-fw fa-image mr-1"></i>Kerjasama</a> 
-            </div>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwoa" aria-expanded="false" aria-controls="collapseTwoa">
+          <i class="fas fa-fw fa-info"></i>
+          <span>Informasi</span>
+        </a>
+        <div id="collapseTwoa" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
+          <div class="bg-submenu-nav py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#"><i class="fas fa-fw fa-newspaper mr-1"></i> Kegiatan</a>
+            <a class="collapse-item" href="#"><i class="fas fa-fw fa-image mr-1"></i>Kerjasama</a>
           </div>
-        </li>
+        </div>
+      </li>
       <!-- Divider -->
       <hr class="sidebar-divider">
       <!-- Nav Item - Pages Collapse Menu -->
@@ -136,7 +135,6 @@
         <!-- Begin Page Content -->
         <div class="container-fluid" id="contentWrapper">
           <!-- Page Heading -->
-
           <div class="row">
             <div class="col-lg-12 mb-3">
               <div class="card shadow mb-4">
@@ -151,7 +149,12 @@
                     </div>
                     <div class="mb-3">
                       <label for="isiArtikelBahasa" class="form-label">Isi Konten</label>
-                      <textarea class="form-control" id="isiArtikelBahasa" rows="8"></textarea>
+                      <!--<textarea class="form-control" id="isiArtikelBahasa" rows="8"></textarea> -->
+                      <div id="toolbar-container"></div>
+                      <!-- This container will become the editable. -->
+                      <div id="editor" style="border: 1px solid #F5F6F9;">
+                        <p>This is the initial editor content.</p>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -170,7 +173,11 @@
                     </div>
                     <div class="mb-3">
                       <label for="isiArtikelEnglish" class="form-label">Isi Konten</label>
-                      <textarea class="form-control" id="isiArtikelEnglish" rows="8"></textarea>
+                      <div id="toolbar-container2"></div>
+                      <!-- This container will become the editable. -->
+                      <div id="editor2" style="border: 1px solid #F5F6F9;">
+                        <p>This is the initial editor content.</p>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -360,35 +367,34 @@
                       </div>
                     </div>
                     <div class="mb-3">
-                     <label for="lokasiArtikel" class="form-label">Jenis Kontributor</label>
-                     <select class="form-select mb-4" aria-label="select kontributor">
-                      <option selected>Jenis Kontributor</option>
-                      <option value="1">Kontributor Pamong Budaya</option>
-                      <option value="2">Kontributor Umum</option>
-                    </select>
-                  </div>
+                      <label for="lokasiArtikel" class="form-label">Jenis Kontributor</label>
+                      <select class="form-select mb-4" aria-label="select kontributor">
+                        <option selected>Jenis Kontributor</option>
+                        <option value="1">Kontributor Pamong Budaya</option>
+                        <option value="2">Kontributor Umum</option>
+                      </select>
+                    </div>
                   </form>
                 </div>
               </div>
             </div>
             <div class="col-lg-12 mb-3">
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Foto Slider</h2>
-              </div>
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-lg-12 text-center">
-                    <img class="preview mb-3 text-center" src="assets/img/noimage.jpg" />
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Foto Slider</h2>
+                </div>
+                <div class="card-body ">
+                  <div class="row">
+                    <div class="col-lg-12 text-center">
+                      <img class="preview mb-3 text-center" src="assets/img/noimage.jpg" />
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <input class="form-control" id="uploadThumbnail" type="file" data-preview=".preview">
                   </div>
                 </div>
-                <div class="mb-4">
-                  <input class="form-control" id="uploadThumbnail" type="file" data-preview=".preview">
-                </div>
-
               </div>
             </div>
-          </div>
             <div class="col-lg-12 mb-5 text-center">
               <button class="btn btn-lg btn-secondary mr-3">
                 Save as Draft
@@ -445,6 +451,30 @@
   <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- Custom scripts for all pages-->
   <script src="assets/js/sb-admin-2.min.js"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/decoupled-document/ckeditor.js"></script>
+  <script>
+  DecoupledEditor
+    .create(document.querySelector('#editor'))
+    .then(editor => {
+      const toolbarContainer = document.querySelector('#toolbar-container');
+
+      toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+
+  DecoupledEditor
+    .create(document.querySelector('#editor2'))
+    .then(editor => {
+      const toolbarContainer = document.querySelector('#toolbar-container2');
+
+      toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+  </script>
   <script>
   $("#sidebarToggle").click(function() {
     $("#topNavbar").toggleClass("shrink");

@@ -7,6 +7,38 @@ body {
   font-family: 'Literata', serif;
   overflow-x: hidden;
 }
+#jelajah {
+  background-color: #FEF7E8;
+  position: relative;
+  z-index: 0;
+}
+
+
+.item-jelajah {
+  position: absolute;
+  z-index: -1;
+}
+
+.item-jelajah-1 {
+  top: 100px;
+  left: 0;
+  width: 8%;
+}
+
+.item-jelajah-2 {
+  top: 100px;
+  right: 0;
+  width: 8%;
+}
+
+.item-jelajah-3 {
+  bottom: 0px;
+  right: 0;
+  width: 100%;
+}
+
+
+
 
 .center-v {
   margin-top: auto;

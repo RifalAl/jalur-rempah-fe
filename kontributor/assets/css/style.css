@@ -150,3 +150,11 @@ body {
     top: 7px;
     right: 5px;
 }
+
+footer p{
+  font-size: 14px;
+}
+
+.mr-1{
+  margin-right: .5rem;
+}

@@ -789,6 +789,10 @@ footer {
   height: 240px;
 }
 
+.media-video-detail{
+  height: 415px;
+}
+
 .wrap-aside {
   background-color: white;
   padding: 20px 10px;

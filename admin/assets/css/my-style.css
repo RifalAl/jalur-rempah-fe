@@ -141,3 +141,32 @@
   min-height: 60vh;
   margin-top: 20vh;
 }
+
+.wrapper-foto-slider{
+  padding: .75rem;
+  background-color: rgba(242, 242, 242, 0.4);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.center-v{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+little {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.btn-primary{
+  background-color: #9D7E59;
+  border-color: #9D7E59;
+}
+
+.btn-primary:hover,
+.btn-primary:focus{
+  background-color: #DA9547;
+  border-color: #DA9547;
+}
+}

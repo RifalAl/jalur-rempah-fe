@@ -147,13 +147,11 @@
                       <input type="text" class="form-control" id="judulArtikelBahasa" placeholder="masukkan judul artikel">
                     </div>
                     <div class="mb-3">
-                      <label for="isiArtikelBahasa" class="form-label">Isi Konten</label>
-                      <!--<textarea class="form-control" id="isiArtikelBahasa" rows="8"></textarea> -->
+                      <!--                       <label for="isiArtikelBahasa" class="form-label">Isi Konten</label>
                       <div id="toolbar-container"></div>
-                      <!-- This container will become the editable. -->
                       <div id="editor" style="border: 1px solid #F5F6F9;">
                         <p>This is the initial editor content.</p>
-                      </div>
+                      </div> -->
                     </div>
                   </form>
                 </div>
@@ -172,11 +170,10 @@
                     </div>
                     <div class="mb-3">
                       <label for="isiArtikelEnglish" class="form-label">Isi Konten</label>
-                      <div id="toolbar-container2"></div>
-                      <!-- This container will become the editable. -->
+                      <!--                       <div id="toolbar-container2"></div>
                       <div id="editor2" style="border: 1px solid #F5F6F9;">
                         <p>This is the initial editor content.</p>
-                      </div>
+                      </div> -->
                     </div>
                   </form>
                 </div>
@@ -190,11 +187,11 @@
                 <div class="card-body ">
                   <div class="row">
                     <div class="col-lg-12 text-center">
-                      <img class="preview mb-3 text-center" src="assets/img/noimage.jpg" />
+                      <img class="preview2 mb-3 text-center" src="assets/img/noimage.jpg" width="50%" />
                     </div>
                   </div>
                   <div class="mb-4">
-                    <input class="form-control" id="uploadThumbnail" type="file" data-preview=".preview">
+                    <input class="form-control" id="uploadThumbnail" type="file" data-preview=".preview2">
                   </div>
                   <div class="mb-3">
                     <h5>Panduan unggah gambar</h5>
@@ -209,33 +206,51 @@
               </div>
             </div>
             <div class="col-lg-12 mb-3">
-              <div class="card shadow mb-4">
+              <div class="card shadow mb-4" id="containerSliderFoto">
                 <div class="card-header py-3">
-                  <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Slider Foto</h2>
-                </div>
-                <div class="card-body row">
-                  <div class="col-lg-6">
-                    <input id="files" type="file" multiple />
-                  </div>
-                  <div class="col-lg-6 text-right">
-                    <button id="btnReset" class="btn btn-danger">
-                      <i class="fa fa-retweet mr-2"></i> Reset
-                    </button>
-                  </div>
-                  <div class="col-lg-12 text-center mt-4 mb-3">
-                    <output id="result" class="row" />
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="mb-3">
-                      <h5>Panduan unggah gambar</h5>
-                      <ol>
-                        <li>Lorem Ipsum Dolor Sit Amet</li>
-                        <li>Lorem Ipsum Dolor Sit Amet</li>
-                        <li>Lorem Ipsum Dolor Sit Amet</li>
-                        <li>Lorem Ipsum Dolor Sit Amet</li>
-                      </ol>
+                  <div class="row">
+                    <div class="col-6">
+                      <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Slider</h2>
+                    </div>
+                    <div class="col-6 text-end">
+                      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalPanduan">
+                        <i class="fa fa-book"></i> Panduan
+                      </button>
                     </div>
                   </div>
+                </div>
+                <div class="card-body row" id="fotoSliderBody">
+                  <div class="col-md-12 wrapper-foto-slider">
+                    <div class="row">
+                      <div class="col-sm-1 text-center center-v">
+                        1.
+                      </div>
+                      <div class="col-sm-3">
+                        <img class="sliderPreview" src="assets/img/noimage.jpg" width="100%">
+                      </div>
+                      <div class="col-sm-7">
+                        <div class="row">
+                          <div class="col-12 mb-2">
+                            <input class="form-control" id="uploadThumbnail" type="file" data-preview=".sliderPreview">
+                          </div>
+                          <div class="col-12 mb-2">
+                            <textarea maxlength="100" class="form-control" id="captionFoto" rows="2" placeholder="masukkan caption disini"></textarea>
+                            <little><sup>*</sup> maksimsal 100 karakter</little>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-1">
+                        <button class="btn btn-danger btn-hapus-foto" disabled="">
+                          <i class="fa fa-trash-alt"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer text-center">
+                  <button class="btn btn-primary" id="tambahFoto">
+                    <i class="fa fa-plus"></i> Tambah Foto
+                  </button>
                 </div>
               </div>
             </div>
@@ -483,7 +498,20 @@
       </div>
     </div>
   </div>
-  <!-- Bootstrap core JavaScript-->
+  <!-- Panduan Modal -->
+  <div class="modal fade" id="modalPanduan" tabindex="-1" aria-labelledby="modalPanduanLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalPanduanLabel">Panduan Pengunggahan Gambar Slider</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus.</p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Bootstrap core JavaScript-->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
@@ -491,7 +519,7 @@
   <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- Custom scripts for all pages-->
   <script src="assets/js/sb-admin-2.min.js"></script>
-  <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/decoupled-document/ckeditor.js"></script>
+  <!-- <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/decoupled-document/ckeditor.js"></script> -->
   <script>
   $("#sidebarToggle").click(function() {
     $("#topNavbar").toggleClass("shrink");
@@ -505,55 +533,6 @@
     placeholder: "Pilih Jenis Rempah",
     allowClear: true
   });
-  </script>
-  <script>
-  window.onload = function() {
-    //Check File API support
-    if (window.File && window.FileList && window.FileReader) {
-      var filesInput = document.getElementById("files");
-
-      filesInput.addEventListener("change", function(event) {
-
-        var files = event.target.files; //FileList object
-        var output = document.getElementById("result");
-
-        for (var i = 0; i < files.length; i++) {
-          var file = files[i];
-
-          //Only pics
-          if (!file.type.match('image'))
-            continue;
-
-          var picReader = new FileReader();
-
-          picReader.addEventListener("load", function(event) {
-
-            var picFile = event.target;
-
-            var div = document.createElement("div");
-
-            div.className = "col-lg-4";
-
-            div.innerHTML = "<img class='output_multiple_image mb-3' src='" + picFile.result + "'" +
-              "title='" + picFile.name + "'/>";
-
-            output.insertBefore(div, null);
-
-          });
-
-          //Read the image
-          picReader.readAsDataURL(file);
-        }
-
-      });
-      $("#btnReset").on("click", function() {
-        // console.log($(this).attr('src'));
-        $("#result div").remove();
-      });
-    } else {
-      console.log("Your browser does not support File API");
-    }
-  }
   </script>
   <script>
   DecoupledEditor
@@ -577,6 +556,61 @@
     .catch(error => {
       console.error(error);
     });
+  </script>
+  <script>
+  var i = 1;
+  $("#tambahFoto").click(function() {
+    i++;
+    document.querySelector('#fotoSliderBody').insertAdjacentHTML(
+      'beforeend',
+      `<div class="col-md-12 wrapper-foto-slider" data-id="` + i + `">
+            <div class="row">
+              <div class="col-sm-1 text-center center-v">
+                ` + i + `.
+              </div>
+              <div class="col-sm-3">
+                <img src="assets/img/noimage.jpg" width="100%" class="sliderPreview` + i + `" name="preview-slider` + i + `">
+              </div>
+              <div class="col-sm-7">
+                <div class="row">
+                  <div class="col-12 mb-2">
+                    <input class="form-control" id="uploadThumbnail" type="file" data-preview=".sliderPreview` + i + `" name="uploadThumbnail` + i + `">
+                  </div>
+                  <div class="col-12 mb-2">
+                    <textarea maxlength="100" class="form-control" id="captionFoto" rows="2" placeholder="masukkan caption disini" name="captionFoto` + i + `"></textarea>
+                    <little><sup>*</sup> maksimsal 100 karakter</little>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-1">
+                <button class="btn btn-danger btn-hapus-foto" data-id="` + i + `">
+                  <i class="fa fa-trash-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>`
+    )
+
+  });
+
+  $('#fotoSliderBody').on('click', '.btn-hapus-foto', function(e) {
+    let id = $(this).data('id');
+    // alert(id);
+    $('.wrapper-foto-slider[data-id="' + id + '"]').remove();
+  });
+  </script>
+  <script>
+  $(function() {
+    $("input[data-preview]").change(function() {
+      var input = $(this);
+      var oFReader = new FileReader();
+      oFReader.readAsDataURL(this.files[0]);
+      oFReader.onload = function(oFREvent) {
+        $(input.data('preview')).attr('src', oFREvent.target.result);
+      };
+    });
+  })
+  </script>
   </script>
 </body>
 

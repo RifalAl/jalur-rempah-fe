@@ -556,11 +556,14 @@
   </script>
   <script>
   var i = 1;
+  var x = 1;
   $("#tambahFoto").click(function() {
     i++;
-    document.querySelector('#fotoSliderBody').insertAdjacentHTML(
-      'beforeend',
-      `<div class="col-md-12 wrapper-foto-slider" data-id="` + i + `">
+    if (x < 10) {
+      x++;
+      document.querySelector('#fotoSliderBody').insertAdjacentHTML(
+        'beforeend',
+        `<div class="col-md-12 wrapper-foto-slider" data-id="` + i + `">
             <div class="row">
               <div class="col-sm-4">
                 <img src="assets/img/noimage.jpg" width="100%" class="sliderPreview` + i + `" name="preview-slider` + i + `">
@@ -583,11 +586,18 @@
               </div>
             </div>
           </div>`
-    )
+      )
+    } else {
+      alert("Sudah melebihi batas")
+    }
+    console.log(x);
+
 
   });
 
   $('#fotoSliderBody').on('click', '.btn-hapus-foto', function(e) {
+    x--;
+    console.log(x);
     let id = $(this).data('id');
     // alert(id);
     $('.wrapper-foto-slider[data-id="' + id + '"]').remove();

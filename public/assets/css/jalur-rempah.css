@@ -1473,6 +1473,10 @@ footer {
   color: gray;
 }
 
+.wrap-text-kontributor p{
+  text-shadow: 2px 2px rgba(0,0,0,.3);
+}
+
 
 @media (max-width: 991.98px) {
 

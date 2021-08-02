@@ -39,11 +39,11 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-th-large"></i>
           <span>Konten</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
+        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
           <div class="bg-submenu-nav py-2 collapse-inner rounded">
             <a class="collapse-item " href="konten-artikel.html"><i class="fas fa-fw fa-newspaper mr-1"></i> Artikel</a>
             <a class="collapse-item active" href="konten-foto.html"><i class="fas fa-fw fa-image mr-1"></i>Foto</a>
@@ -69,9 +69,16 @@
       <hr class="sidebar-divider">
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="master-data.html">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#masterData" aria-expanded="false" aria-controls="masterData">
           <i class="fas fa-fw fa-database"></i>
-          <span>Master Data</span></a>
+          <span>Master Data</span>
+        </a>
+        <div id="masterData" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
+          <div class="bg-submenu-nav py-2 collapse-inner rounded">
+            <a class="collapse-item" href="master-data-jenis-rempah.html"><i class="fas fa-fw fa-leaf mr-1"></i>Jenis Rempah</a>
+            <a class="collapse-item" href="master-data-kontributor.html"><i class="fas fa-fw fa-edit mr-1"></i>Kontributor</a>
+          </div>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="user.html">
@@ -147,11 +154,11 @@
                       <input type="text" class="form-control" id="judulArtikelBahasa" placeholder="masukkan judul artikel">
                     </div>
                     <div class="mb-3">
-                      <!--                       <label for="isiArtikelBahasa" class="form-label">Isi Konten</label>
+                      <label for="isiArtikelBahasa" class="form-label">Isi Konten</label>
                       <div id="toolbar-container"></div>
                       <div id="editor" style="border: 1px solid #F5F6F9;">
                         <p>This is the initial editor content.</p>
-                      </div> -->
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -170,10 +177,10 @@
                     </div>
                     <div class="mb-3">
                       <label for="isiArtikelEnglish" class="form-label">Isi Konten</label>
-                      <!--                       <div id="toolbar-container2"></div>
+                      <div id="toolbar-container2"></div>
                       <div id="editor2" style="border: 1px solid #F5F6F9;">
                         <p>This is the initial editor content.</p>
-                      </div> -->
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -516,7 +523,7 @@
   <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- Custom scripts for all pages-->
   <script src="assets/js/sb-admin-2.min.js"></script>
-  <!-- <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/decoupled-document/ckeditor.js"></script> -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/decoupled-document/ckeditor.js"></script>
   <script>
   $("#sidebarToggle").click(function() {
     $("#topNavbar").toggleClass("shrink");

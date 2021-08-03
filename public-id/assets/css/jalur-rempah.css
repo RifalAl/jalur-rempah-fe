@@ -1656,6 +1656,11 @@ footer {
   .wrap-side-navbar {
     padding-bottom: 5px;
   }
+
+  .list-group-horizontal{
+    justify-content: center;
+
+  }
 }
 
 @media (max-width: 575.98px) {

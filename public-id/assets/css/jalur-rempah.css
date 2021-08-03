@@ -1483,6 +1483,10 @@ footer {
   color: gray;
 }
 
+  #logoNavbar{
+    width: 115px;
+  }
+
 @media (max-width: 991.98px) {
 
   .navbar-nav {
@@ -1660,6 +1664,10 @@ footer {
   .list-group-horizontal{
     justify-content: center;
 
+  }
+
+  #logoNavbar{
+    width: 90px;
   }
 }
 

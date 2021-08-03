@@ -1670,25 +1670,15 @@ footer {
     width: 90px;
   }
 
+  .slick-dots {
+    width: 97vw;
 
-  .item-jelajah-1 {
-    display: none;
   }
 
-  .item-jelajah-2 {
-    display: none;
-  }
+  .slick-dots li {
 
-  .item-jelajah-3 {
-    display: none;
-  }
+    width: 16px;
 
-  .item-kompas {
-    display: none;
-  }
-
-  .item-cengkeh {
-    display: none;
   }
 }
 

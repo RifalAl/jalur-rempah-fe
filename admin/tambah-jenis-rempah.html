@@ -45,7 +45,7 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
           <div class="bg-submenu-nav py-2 collapse-inner rounded">
-            <a class="collapse-item" href="konten-artikel.html"><i class="fas fa-fw fa-newspaper mr-1"></i> Artikel</a>
+            <a class="collapse-item " href="konten-artikel.html"><i class="fas fa-fw fa-newspaper mr-1"></i> Artikel</a>
             <a class="collapse-item" href="konten-foto.html"><i class="fas fa-fw fa-image mr-1"></i>Foto</a>
             <a class="collapse-item" href="konten-video.html"><i class="fas fa-fw fa-video mr-1"></i>Video</a>
             <a class="collapse-item" href="konten-publikasi.html"><i class="fas fa-fw fa-newspaper mr-1"></i>Publikasi</a>
@@ -53,7 +53,6 @@
           </div>
         </div>
       </li>
-      <!-- Divider -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwoa" aria-expanded="false" aria-controls="collapseTwoa">
           <i class="fas fa-fw fa-info"></i>
@@ -66,13 +65,19 @@
           </div>
         </div>
       </li>
-      <!-- Divider -->
       <hr class="sidebar-divider">
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item active">
-        <a class="nav-link" href="master-data.html">
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#masterData" aria-expanded="true" aria-controls="masterData">
           <i class="fas fa-fw fa-database"></i>
-          <span>Master Data</span></a>
+          <span>Master Data</span>
+        </a>
+        <div id="masterData" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
+          <div class="bg-submenu-nav py-2 collapse-inner rounded">
+            <a class="collapse-item active" href="master-data-jenis-rempah.html"><i class="fas fa-fw fa-leaf mr-1"></i>Jenis Rempah</a>
+            <a class="collapse-item" href="master-data-kontributor.html"><i class="fas fa-fw fa-edit mr-1"></i>Kontributor</a>
+          </div>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="user.html">
@@ -91,6 +96,7 @@
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
     </ul>
+    <!--
     <!-- End of Sidebar -->
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -159,7 +165,7 @@
                   </form>
                 </div>
                 <div class="card-footer text-end">
-                  <button class="btn btn-success">
+                  <button class="btn btn-success" id="btnSimpan">
                     <i class="fa fa-save mr-1"></i> Simpan
                   </button>
                   <button class="btn btn-danger">
@@ -215,8 +221,8 @@
   <!-- Core plugin JavaScript-->
   <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- Custom scripts for all pages-->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="assets/js/sb-admin-2.min.js"></script>
-  <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/decoupled-document/ckeditor.js"></script>
   <script>
   $("#sidebarToggle").click(function() {
     $("#topNavbar").toggleClass("shrink");
@@ -226,45 +232,22 @@
   });
   </script>
   <script>
-  $(function() {
-    $("input[data-preview]").change(function() {
-      var input = $(this);
-      var oFReader = new FileReader();
-      oFReader.readAsDataURL(this.files[0]);
-      oFReader.onload = function(oFREvent) {
-        $(input.data('preview')).attr('src', oFREvent.target.result);
-      };
-    });
-  })
-  </script>
-  <script>
-  $("#pilihLokasi").select2({
-    placeholder: "Pilih Jenis Rempah",
-    allowClear: true
+  $(document).on('click', '#btnSimpan', function(e) {
+    Swal.fire({
+      title: 'Ingin Menyimpan Jenis Rempah?',
+      showDenyButton: true,
+      showCancelButton: false,
+      confirmButtonText: `Simpan`,
+      denyButtonText: `Batal`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('Tersimpan!', '', 'success')
+      } else if (result.isDenied) {
+        Swal.fire('Dibatalkan', '', 'info')
+      }
+    })
   });
-  </script>
-  <script>
-  DecoupledEditor
-    .create(document.querySelector('#editor'))
-    .then(editor => {
-      const toolbarContainer = document.querySelector('#toolbar-container');
-
-      toolbarContainer.appendChild(editor.ui.view.toolbar.element);
-    })
-    .catch(error => {
-      console.error(error);
-    });
-
-  DecoupledEditor
-    .create(document.querySelector('#editor2'))
-    .then(editor => {
-      const toolbarContainer = document.querySelector('#toolbar-container2');
-
-      toolbarContainer.appendChild(editor.ui.view.toolbar.element);
-    })
-    .catch(error => {
-      console.error(error);
-    });
   </script>
 </body>
 

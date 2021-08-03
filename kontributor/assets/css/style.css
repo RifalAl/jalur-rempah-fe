@@ -77,8 +77,13 @@ body {
   padding-right: 50px;
 }
 
+.sub-judul {
+  font-size: 28px;
+  color: white;
+}
+
 .sub-judul-form {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .des-form-daftar {
@@ -116,14 +121,34 @@ body {
 }
 
 .bg-gradient-primary {
-  background-color: #fff;
-  background-image: linear-gradient(180deg, #9D7E59 20%, #E09745 100%);
+  background-color: #8B7D5D !important;
+  /*background-image: linear-gradient(180deg, #9D7E59 20%, #E09745 100%);*/
+
 }
 
 
 .btn-publish {
   background-color: #CBAB59;
   border-color: #CBAB59;
+}
+
+.btn-publish: hover {
+  background-color: #CBAB59;
+  border-color: #CBAB59;
+}
+
+.btn-primary-jarem {
+  background-color: #DC3646;
+  border-color: #DC3646;
+  width: 300px;
+}
+
+.btn-primary-jarem:hover,
+.btn-primary-jarem:focus,
+.btn-primary-jarem:active {
+  background-color: #BE8A4F;
+  border-color: #BE8A4F;
+  /*color: #202020;*/
 }
 
 .select2-container--default .select2-selection--single {
@@ -143,18 +168,25 @@ body {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-    line-height: 25px;
+  line-height: 25px;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
-    top: 7px;
-    right: 5px;
+  top: 7px;
+  right: 5px;
 }
 
-footer p{
+footer p {
   font-size: 14px;
 }
 
-.mr-1{
+.mr-1 {
   margin-right: .5rem;
+}
+
+@media (max-width: 991.98px) {
+  .sub-judul {
+    font-size: 20px;
+    color: white;
+  }
 }

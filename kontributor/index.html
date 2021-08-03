@@ -9,73 +9,50 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>Kontributor</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="assets/img/logo/favicon.PNG">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-  <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-gradient-primary">
-      <div class="container ">
-        <div class="collapse navbar-collapse" id="navbarText">
-          <a href="../public/index.html">
-            <img id="logoNavbar" src="assets/img/logo/logo-navbar.png" height="50px">
-          </a>
-          <span class="navbar-text col-lg text-end text-white ">
-            <h2 class="sub-judul">Kontributor</h2>
-          </span>
-        </div>
+  <nav class="navbar navbar-light bg-light bg-gradient-primary sticky-top">
+    <div class="container">
+      <a href="../public-id/index.html" class="navbar-brand">
+        <img id="logoNavbar" src="assets/img/logo/logo-navbar.png" height="50px">
+      </a>
+      <div class="d-flex">
+        <h2 class="sub-judul"><i class="fa fa-edit"></i> Kontributor</h2>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
   <section id="jelajah">
     <div class="container pb-5 pt-5">
       <img class="item-jelajah item-jelajah-1" src="assets/img/item-daun-1.svg">
       <img class="item-jelajah item-jelajah-2" src="assets/img/item-daun-2.svg">
       <form>
         <div class="col-lg-12 mb-4">
-          <div class="card shadow mb-4 p-4">
+          <div class="card shadow">
+            <div class="card-header py-3">
+              <h2 class="m-0 font-weight-bold text-gray-800 sub-judul-form">Konten Artikel</h2>
+            </div>
             <div class="card-body ">
-              <div class="row">
-                <div class="col-lg-12 text-center">
-                  <img class="preview mb-4 text-center" src="assets/img/noimage.jpg" />
-                </div>
+              <div class="mb-3">
+                <label for="judulartikel" class="col-form-label">Judul Artikel</label>
+                <input type="text" class="form-control" id="judulartikel">
               </div>
-              <div class="mb-4 row">
-                <label for="thumbnail" class="col-sm-2 col-form-label">Header img</label>
-                <div class="col-sm-10">
-                  <input class="form-control" id="uploadThumbnail" type="file" data-preview=".preview">
-                </div>
-              </div>
-              <div class="mb-4 row">
-                <label for="judulartikel" class="col-sm-2 col-form-label">Judul Artikel</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="judulartikel">
-                </div>
-              </div>
-              <div class="mb-4 row">
-                <label for="isiartikel" class="col-sm-2 col-form-label">Isi Artikel/Foto/Video</label>
-                <div class="col-sm-10">
-                  <div class="form-floating">
-                    <div id="toolbar-container"></div>
-                    <!-- This container will become the editable. -->
-                    <div id="editor" style="border: 1px solid #F5F6F9;">
-                      <p>This is the initial editor content.</p>
-                    </div>
+              <div class="mb-3">
+                <label for="isiArtikel" class="col-form-label">Isi Artikel/Foto/Video</label>
+                <div class="form-floating">
+                  <div id="toolbar-container"></div>
+                  <!-- This container will become the editable. -->
+                  <div id="editor" style="border: 1px solid #F5F6F9;">
+                    <p>This is the initial editor content.</p>
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-lg-12 text-center">
-                  <img class="preview mb-4 text-center" src="assets/img/noimage.jpg" />
-                </div>
-              </div>
-              <div class="mb-4 row">
-                <label for="thumbnail" class="col-sm-2 col-form-label">Thumbnail</label>
-                <div class="col-sm-10">
-                  <input class="form-control" id="uploadThumbnail" type="file" data-preview=".preview">
-                </div>
+              <div class="mb-3">
+                <label for="linkItem" class="col-form-label">Link/Foto/Vidoe/Dsb</label>
+                <input type="text" class="form-control" id="linkItem">
               </div>
             </div>
           </div>
@@ -83,55 +60,48 @@
       </form>
       <form>
         <div class="col-lg-12 mb-4">
-          <div class="card shadow mb-4 p-4">
+          <div class="card shadow">
+            <div class="card-header py-3">
+              <h2 class="m-0 font-weight-bold text-gray-800 sub-judul-form">Profil Penulis</h2>
+            </div>
             <div class="card-body ">
-              <div class="mb-4 row">
-                <label for="namapenulis" class="col-sm-2 col-form-label">Nama Penulis</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="judulartikel">
-                </div>
+              <div class="mb-3">
+                <label for="namapenulis" class="col-form-label">Nama Penulis</label>
+                <input type="text" class="form-control" id="namapenulis">
               </div>
-              <div class="mb-4 row">
-                <label for="email" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control" id="judulartikel">
-                </div>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email</label>
+                <input type="email" class="form-control" id="email">
               </div>
-              <div class="mb-4 row">
+              <div class="mb-3">
                 <label for="domisili" class="col-sm-2 col-form-label">Domisili</label>
-                <div class="col-sm-10">
-                  <select id="pilihLokasi" class="form-select select2-style" aria-label="Default select example">
-                    <option selected>Pilih Lokasi</option>
-                    <option value="1">Lokasi 1</option>
-                    <option value="2">Lokasi 2</option>
-                    <option value="3">Lokasi 3</option>
-                    <option value="4">Lokasi 4</option>
-                    <option value="5">Lokasi 5</option>
-                  </select>
-                </div>
+                <select id="domisili" class="form-select select2-style" aria-label="Default select example">
+                  <option selected>Pilih Lokasi</option>
+                  <option value="1">Lokasi 1</option>
+                  <option value="2">Lokasi 2</option>
+                  <option value="3">Lokasi 3</option>
+                  <option value="4">Lokasi 4</option>
+                  <option value="5">Lokasi 5</option>
+                </select>
               </div>
-              <div class="mb-4 row">
-                <label for="atribusi1" class="col-sm-2 col-form-label">Atribusi</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="judulartikel">
-                </div>
+              <div class="mb-3">
+                <label for="atribusi" class="col-form-label">Artribusi</label>
+                <input type="text" class="form-control" id="atribusi">
               </div>
-              <div class="mb-4 row">
+              <div class="mb-3">
                 <label for="atribusi2" class="col-sm-2 col-form-label">Kategori</label>
-                <div class="col-sm-10">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected></option>
-                    <option value="1">Umum</option>
-                    <option value="2">Pamong Budaya</option>
-                  </select>
-                </div>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected></option>
+                  <option value="1">Umum</option>
+                  <option value="2">Pamong Budaya</option>
+                </select>
               </div>
             </div>
           </div>
         </div>
       </form>
       <div class="col-lg-12 text-center">
-        <button class="btn btn-lg btn-success btn-publish ">
+        <button class="btn btn-lg btn-success btn-primary-jarem">
           Kirim Tulisan
         </button>
       </div>

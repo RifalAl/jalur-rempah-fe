@@ -15,8 +15,10 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="assets/css/tagin.css" rel="stylesheet">
   <link href="assets/css/my-style.css" rel="stylesheet">
   <link rel="shortcut icon" href="assets/img/logo/favicon.png">
+</head>
 </head>
 
 <body id="page-top">
@@ -48,7 +50,7 @@
             <a class="collapse-item " href="konten-artikel.html"><i class="fas fa-fw fa-newspaper mr-1"></i> Artikel</a>
             <a class="collapse-item " href="konten-foto.html"><i class="fas fa-fw fa-image mr-1"></i>Foto</a>
             <a class="collapse-item " href="konten-video.html"><i class="fas fa-fw fa-video mr-1"></i>Video</a>
-            <a class="collapse-item " href="konten-publikasi.html"><i class="fas fa-fw fa-newspaper mr-1"></i>Publikasi</a>
+            <a class="collapse-item" href="konten-publikasi.html"><i class="fas fa-fw fa-newspaper mr-1"></i>Publikasi</a>
             <a class="collapse-item active" href="konten-suara.html"><i class="fas fa-fw fa-volume-up mr-1"></i>Suara</a>
           </div>
         </div>
@@ -68,7 +70,7 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
       <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#masterData" aria-expanded="false" aria-controls="masterData">
           <i class="fas fa-fw fa-database"></i>
           <span>Master Data</span>
@@ -162,6 +164,16 @@
                         <p>This is the initial editor content.</p>
                       </div>
                     </div>
+                    <div class="mb-3">
+                      <label for="metaDesID" class="form-label">Meta Description</label>
+                      <textarea class="form-control" id="metaDesEN" rows="2" maxlength="160" placeholder="masukkan meta description"></textarea>
+                      <little>maks 160 karakter</little>
+                    </div>
+                    <div class="mb-3">
+                      <label for="keywordsID" class="form-label">Keywords</label>
+                      <input id="keywordsID" type="text" name="tags" class="form-control tagin" value="jalur rempah,nusantara,jejak,masa depan">
+                      <little>gunakan tombol "," (koma) untuk memisahkan keyword</little>
+                    </div>
                   </form>
                 </div>
               </div>
@@ -185,6 +197,16 @@
                         <p>This is the initial editor content.</p>
                       </div>
                     </div>
+                    <div class="mb-3">
+                      <label for="metaDesEN" class="form-label">Meta Description</label>
+                      <textarea class="form-control" id="metaDesEN" rows="2" maxlength="160" placeholder="masukkan meta description"></textarea>
+                      <little>maks 160 karakter</little>
+                    </div>
+                    <div class="mb-3">
+                      <label for="keywordsEN" class="form-label">Keywords</label>
+                      <input id="keywordsID" type="text" name="tags" class="form-control tagin" data-separator=" " value="autocomplete forms inputmode inputs ux">
+                      <little>gunakan tombol "," (koma) untuk memisahkan keyword</little>
+                    </div>
                   </form>
                 </div>
               </div>
@@ -194,11 +216,11 @@
                 <div class="card-header py-3">
                   <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Key</h2>
                 </div>
-                <div class="card-body">
+                <div class="card-body ">
                   <div class="mb-3">
-                    <label for="youtubeKey" class="form-label">Sound Cloud Key</label>
-                    <input type="text" class="form-control" id="youtubeKey" placeholder="masukkan youtube key">
-                    <small class="ml-1">Key di dapatkan dari embed code Sound Cloud</small>
+                    <label for="soundCloudKey" class="form-label">Soundcloud Key</label>
+                    <input type="text" class="form-control" id="soundCloudKey" placeholder="masukkan soundcloud key">
+                    <small class="ml-1">Key di dapatkan dari embed code soundcloude</small>
                   </div>
                 </div>
               </div>
@@ -346,33 +368,25 @@
                       <div class="px-3 row">
                         <div class="col-lg-4">
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="" id="peng-kontributor">
+                            <label class="form-check-label" for="peng-kontributor">
                               Kontributor Umum/Pamong
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" value="" id="peng-slider">
+                            <label class="form-check-label" for="peng-slider">
                               Tampilkan di Slider Utama
                             </label>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="mb-3">
-                      <label for="lokasiArtikel" class="form-label">Jenis Kontributor</label>
-                      <select class="form-select mb-4" aria-label="select kontributor">
-                        <option selected>Jenis Kontributor</option>
-                        <option value="1">Kontributor Pamong Budaya</option>
-                        <option value="2">Kontributor Umum</option>
-                      </select>
-                    </div>
                   </form>
                 </div>
               </div>
             </div>
-            <div class="col-lg-12 mb-3">
+            <div id="fotoSlider" class="col-lg-12 mb-3" style="display: none;">
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Foto Slider</h2>
@@ -389,11 +403,39 @@
                 </div>
               </div>
             </div>
+            <div id="kontributor" class="col-lg-12 mb-3" style="display: none;">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Kontributor</h2>
+                </div>
+                <div class="card-body ">
+                  <div class="mb-3">
+                    <label for="jenisKontributor" class="form-label">Jenis Kontributor</label>
+                    <select class="form-select mb-4" aria-label="" id="jenisKontributor">
+                      <option selected>Jenis Kontributor</option>
+                      <option value="1">Kontributor Pamong Budaya</option>
+                      <option value="2">Kontributor Umum</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="namaKontributor" class="form-label">Nama Kontributor</label>
+                    <select id="namaKontributor" class="form-select select2-style" aria-label="Default select example">
+                      <option selected>Pilih Kontributor</option>
+                      <option value="1">Kontributor 1</option>
+                      <option value="2">Kontributor 2</option>
+                      <option value="3">Kontributo 3</option>
+                      <option value="4">Kontributo 4</option>
+                      <option value="5">Kontributo 5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="col-lg-12 mb-5 text-center">
               <button class="btn btn-lg btn-secondary mr-3">
                 Save as Draft
               </button>
-              <button class="btn btn-lg btn-success">
+              <button class="btn btn-lg btn-primary-jarem">
                 Publish
               </button>
             </div>
@@ -443,32 +485,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
   <!-- Core plugin JavaScript-->
   <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <!-- Custom scripts for all pages-->
-  <script src="assets/js/sb-admin-2.min.js"></script>
   <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/decoupled-document/ckeditor.js"></script>
-  <script>
-  DecoupledEditor
-    .create(document.querySelector('#editor'))
-    .then(editor => {
-      const toolbarContainer = document.querySelector('#toolbar-container');
-
-      toolbarContainer.appendChild(editor.ui.view.toolbar.element);
-    })
-    .catch(error => {
-      console.error(error);
-    });
-
-  DecoupledEditor
-    .create(document.querySelector('#editor2'))
-    .then(editor => {
-      const toolbarContainer = document.querySelector('#toolbar-container2');
-
-      toolbarContainer.appendChild(editor.ui.view.toolbar.element);
-    })
-    .catch(error => {
-      console.error(error);
-    });
-  </script>
+  <!-- Custom scripts for all pages-->
+  <script src="assets/js/tagin.min.js"></script>
+  <script src="assets/js/sb-admin-2.min.js"></script>
   <script>
   $("#sidebarToggle").click(function() {
     $("#topNavbar").toggleClass("shrink");
@@ -480,6 +500,10 @@
   <script>
   $("#pilihLokasi").select2({
     placeholder: "Pilih Jenis Rempah",
+    allowClear: true
+  });
+  $("#namaKontributor").select2({
+    placeholder: "Pilih Kontributor",
     allowClear: true
   });
   </script>
@@ -531,6 +555,47 @@
       console.log("Your browser does not support File API");
     }
   }
+  </script>
+  <script>
+  DecoupledEditor
+    .create(document.querySelector('#editor'))
+    .then(editor => {
+      const toolbarContainer = document.querySelector('#toolbar-container');
+
+      toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+
+  DecoupledEditor
+    .create(document.querySelector('#editor2'))
+    .then(editor => {
+      const toolbarContainer = document.querySelector('#toolbar-container2');
+
+      toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+  </script>
+  <script>
+  for (const el of document.querySelectorAll('.tagin')) {
+    tagin(el)
+  }
+  </script>
+  <script>
+  $(document).ready(function() {
+    $("#peng-kontributor").click(function() {
+      $("#kontributor").toggle();
+      $("#namaKontributor").select2();
+    });
+    $("#peng-slider").click(function() {
+      $("#fotoSlider").toggle();
+
+    });
+
+  });
   </script>
 </body>
 

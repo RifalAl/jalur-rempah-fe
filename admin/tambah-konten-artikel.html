@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="assets/css/tagin.css" rel="stylesheet">
   <link href="assets/css/my-style.css" rel="stylesheet">
   <link rel="shortcut icon" href="assets/img/logo/favicon.png">
 </head>
@@ -69,7 +70,7 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
       <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#masterData" aria-expanded="false" aria-controls="masterData">
           <i class="fas fa-fw fa-database"></i>
           <span>Master Data</span>
@@ -163,6 +164,16 @@
                         <p>This is the initial editor content.</p>
                       </div>
                     </div>
+                    <div class="mb-3">
+                      <label for="metaDesID" class="form-label">Meta Description</label>
+                      <textarea class="form-control" id="metaDesEN" rows="2" maxlength="160" placeholder="masukkan meta description"></textarea>
+                      <little>maks 160 karakter</little>
+                    </div>
+                    <div class="mb-3">
+                      <label for="keywordsID" class="form-label">Keywords</label>
+                      <input id="keywordsID" type="text" name="tags" class="form-control tagin" value="jalur rempah,nusantara,jejak,masa depan">
+                      <little>gunakan tombol "," (koma) untuk memisahkan keyword</little>
+                    </div>
                   </form>
                 </div>
               </div>
@@ -186,6 +197,16 @@
                         <p>This is the initial editor content.</p>
                       </div>
                     </div>
+                    <div class="mb-3">
+                      <label for="metaDesEN" class="form-label">Meta Description</label>
+                      <textarea class="form-control" id="metaDesEN" rows="2" maxlength="160" placeholder="masukkan meta description"></textarea>
+                      <little>maks 160 karakter</little>
+                    </div>
+                    <div class="mb-3">
+                      <label for="keywordsEN" class="form-label">Keywords</label>
+                      <input id="keywordsID" type="text" name="tags" class="form-control tagin" data-separator=" " value="autocomplete forms inputmode inputs ux">
+                      <little>gunakan tombol "," (koma) untuk memisahkan keyword</little>
+                    </div>
                   </form>
                 </div>
               </div>
@@ -193,7 +214,7 @@
             <div class="col-lg-12 mb-3">
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Thumbnail Artikel</h2>
+                  <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Foto Utama</h2>
                 </div>
                 <div class="card-body ">
                   <div class="row">
@@ -359,33 +380,25 @@
                       <div class="px-3 row">
                         <div class="col-lg-4">
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="" id="peng-kontributor">
+                            <label class="form-check-label" for="peng-kontributor">
                               Kontributor Umum/Pamong
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" value="" id="peng-slider">
+                            <label class="form-check-label" for="peng-slider">
                               Tampilkan di Slider Utama
                             </label>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="mb-3">
-                      <label for="lokasiArtikel" class="form-label">Jenis Kontributor</label>
-                      <select class="form-select mb-4" aria-label="select kontributor">
-                        <option selected>Jenis Kontributor</option>
-                        <option value="1">Kontributor Pamong Budaya</option>
-                        <option value="2">Kontributor Umum</option>
-                      </select>
-                    </div>
                   </form>
                 </div>
               </div>
             </div>
-            <div class="col-lg-12 mb-3">
+            <div id="fotoSlider" class="col-lg-12 mb-3" style="display: none;">
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Foto Slider</h2>
@@ -402,11 +415,39 @@
                 </div>
               </div>
             </div>
+            <div id="kontributor" class="col-lg-12 mb-3" style="display: none;">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">Kontributor</h2>
+                </div>
+                <div class="card-body ">
+                  <div class="mb-3">
+                    <label for="jenisKontributor" class="form-label">Jenis Kontributor</label>
+                    <select class="form-select mb-4" aria-label="" id="jenisKontributor">
+                      <option selected>Jenis Kontributor</option>
+                      <option value="1">Kontributor Pamong Budaya</option>
+                      <option value="2">Kontributor Umum</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="namaKontributor" class="form-label">Nama Kontributor</label>
+                    <select id="namaKontributor" class="form-select select2-style" aria-label="Default select example">
+                      <option selected>Pilih Kontributor</option>
+                      <option value="1">Kontributor 1</option>
+                      <option value="2">Kontributor 2</option>
+                      <option value="3">Kontributo 3</option>
+                      <option value="4">Kontributo 4</option>
+                      <option value="5">Kontributo 5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="col-lg-12 mb-5 text-center">
               <button class="btn btn-lg btn-secondary mr-3">
                 Save as Draft
               </button>
-              <button class="btn btn-lg btn-success">
+              <button class="btn btn-lg btn-primary-jarem">
                 Publish
               </button>
             </div>
@@ -419,7 +460,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Jalur Rempah RI 2021</span>
+            <span>Kompleks Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi, Jalan Jenderal Sudirman, Senayan, Jakarta 10270</span>
           </div>
         </div>
       </footer>
@@ -458,6 +499,7 @@
   <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- Custom scripts for all pages-->
   <script src="assets/js/sb-admin-2.min.js"></script>
+  <script src="assets/js/tagin.min.js"></script>
   <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/decoupled-document/ckeditor.js"></script>
   <script>
   $("#sidebarToggle").click(function() {
@@ -484,6 +526,10 @@
     placeholder: "Pilih Jenis Rempah",
     allowClear: true
   });
+  $("#namaKontributor").select2({
+    placeholder: "Pilih Kontributor",
+    allowClear: true
+  });
   </script>
   <script>
   DecoupledEditor
@@ -507,6 +553,24 @@
     .catch(error => {
       console.error(error);
     });
+  </script>
+  <script>
+  for (const el of document.querySelectorAll('.tagin')) {
+    tagin(el)
+  }
+  </script>
+  <script>
+  $(document).ready(function() {
+    $("#peng-kontributor").click(function() {
+      $("#kontributor").toggle();
+      $("#namaKontributor").select2();
+    });
+    $("#peng-slider").click(function() {
+      $("#fotoSlider").toggle();
+
+    });
+
+  });
   </script>
 </body>
 

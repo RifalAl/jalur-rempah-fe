@@ -14,7 +14,7 @@
     top: 0;
     left: 17.5%;
     width: 82.5%;
-    z-index: 1;
+    z-index: 5;
   }
 
   #contentWrapper {
@@ -32,7 +32,7 @@
   }
 
   #logoNavbar {
-    width: 150px;
+    width: 110px;
   }
 
   .logo-shrink {
@@ -161,17 +161,30 @@ little {
   margin-top: 5px;
 }
 
-.btn-primary {
-  background-color: #9D7E59;
-  border-color: #9D7E59;
+
+.btn-primary-jarem {
+  background-color: #DC3646;
+  border-color: #DC3646;
+  color: #fff;
+  /*width: 300px;*/
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: #DA9547;
-  border-color: #DA9547;
+.btn-primary-jarem:hover,
+.btn-primary-jarem:focus,
+.btn-primary-jarem:active {
+  background-color: #BE8A4F;
+  border-color: #BE8A4F;
+  color: #fff;
 }
 
 .sidebar-dark hr.sidebar-divider {
-    border-top: 1px solid rgba(255,255,255,1);
+  border-top: 1px solid rgba(255, 255, 255, 1);
+}
+
+.form-label {
+  color: #202020;
+}
+
+.tagin-tag{
+  padding: 0px 7px;
 }

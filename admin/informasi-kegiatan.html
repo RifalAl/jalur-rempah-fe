@@ -55,23 +55,23 @@
         </div>
       </li>
       <!-- Divider -->
-        <hr class="sidebar-divider">
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-toggle="collapse" data-target="#menuInformasi" aria-expanded="true" aria-controls="menuInformasi">
-            <i class="fas fa-fw fa-th-large"></i>
-            <span>Informasi</span>
-          </a>
-          <div id="menuInformasi" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
-            <div class="bg-submenu-nav py-2 collapse-inner rounded">
-              <a class="collapse-item active" href="informasi-kegiatan.html"><i class="fas fa-fw fa-newspaper mr-1"></i> Kegiatan</a>
-              <a class="collapse-item" href="informasi-kerjasama.html"><i class="fas fa-fw fa-image mr-1"></i>Kerjasama</a> 
-            </div>
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#menuInformasi" aria-expanded="true" aria-controls="menuInformasi">
+          <i class="fas fa-fw fa-th-large"></i>
+          <span>Informasi</span>
+        </a>
+        <div id="menuInformasi" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar" style="">
+          <div class="bg-submenu-nav py-2 collapse-inner rounded">
+            <a class="collapse-item active" href="informasi-kegiatan.html"><i class="fas fa-fw fa-newspaper mr-1"></i> Kegiatan</a>
+            <a class="collapse-item" href="informasi-kerjasama.html"><i class="fas fa-fw fa-image mr-1"></i>Kerjasama</a>
           </div>
-        </li>
+        </div>
+      </li>
       <!-- Divider -->
       <hr class="sidebar-divider">
       <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#masterData" aria-expanded="false" aria-controls="masterData">
           <i class="fas fa-fw fa-database"></i>
           <span>Master Data</span>
@@ -152,26 +152,30 @@
                     <div class="col-6">
                       <h2 class="m-0 font-weight-bold text-gray-800 sub-judul">List Kegiatan</h2>
                     </div>
-                    
                   </div>
                 </div>
-                
                 <div class="card-body">
                   <table id="listArtikel" class="table" style="width:100%">
                     <thead>
                       <tr>
                         <th>No.</th>
+                        <th>Tanggal</th>
                         <th>Judul Kegiatan</th>
                         <th>Penulis</th>
+                        <th>Status</th>
                         <th>Aksi</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>#</td>
+                        <td>20/11/2021</td>
                         <td>Lorem Ipsum Lorem Ipsum Lorem Ipsum</td>
                         <td>Anonim</td>
                         <td>
+                          <span class="badge rounded-pill py-1 px-3 bg-success">Aktif</span>
+                        </td>
+                        <td>
                           <a href="../public/detail-berita.html" class="btn btn-sm btn-outline-primary">
                             View
                           </a>
@@ -185,24 +189,12 @@
                       </tr>
                       <tr>
                         <td>#</td>
+                        <td>20/11/2021</td>
                         <td>Lorem Ipsum</td>
                         <td>Anonim</td>
                         <td>
-                          <a href="../public/detail-berita.html" class="btn btn-sm btn-outline-primary">
-                            View
-                          </a>
-                          <a href="edit-konten-artikel.html" class="btn btn-sm btn-outline-info">
-                            Edit
-                          </a>
-                          <button class="btn btn-sm btn-outline-danger btn-hapus">
-                            Hapus
-                          </button>
+                          <span class="badge rounded-pill py-1 px-3 bg-success">Aktif</span>
                         </td>
-                      </tr>
-                      <tr>
-                        <td>#</td>
-                        <td>Source undefine</td>
-                        <td>Anonim</td>
                         <td>
                           <a href="../public/detail-berita.html" class="btn btn-sm btn-outline-primary">
                             View
@@ -217,8 +209,12 @@
                       </tr>
                       <tr>
                         <td>#</td>
+                        <td>20/11/2021</td>
                         <td>Source undefine</td>
                         <td>Anonim</td>
+                        <td>
+                          <span class="badge rounded-pill py-1 px-3 bg-secondary">Draft</span>
+                        </td>
                         <td>
                           <a href="../public/detail-berita.html" class="btn btn-sm btn-outline-primary">
                             View
@@ -233,8 +229,32 @@
                       </tr>
                       <tr>
                         <td>#</td>
+                        <td>20/11/2021</td>
                         <td>Source undefine</td>
                         <td>Anonim</td>
+                        <td>
+                          <span class="badge rounded-pill py-1 px-3 bg-secondary">Draft</span>
+                        </td>
+                        <td>
+                          <a href="../public/detail-berita.html" class="btn btn-sm btn-outline-primary">
+                            View
+                          </a>
+                          <a href="edit-konten-artikel.html" class="btn btn-sm btn-outline-info">
+                            Edit
+                          </a>
+                          <button class="btn btn-sm btn-outline-danger btn-hapus">
+                            Hapus
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>#</td>
+                        <td>20/11/2021</td>
+                        <td>Source undefine</td>
+                        <td>Anonim</td>
+                        <td>
+                          <span class="badge rounded-pill py-1 px-3 bg-success">Aktif</span>
+                        </td>
                         <td>
                           <a href="../public/detail-berita.html" class="btn btn-sm btn-outline-primary">
                             View

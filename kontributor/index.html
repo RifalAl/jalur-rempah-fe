@@ -77,11 +77,20 @@
                 <label for="domisili" class="col-sm-2 col-form-label">Domisili</label>
                 <select id="domisili" class="form-select select2-style" aria-label="Default select example">
                   <option selected>Pilih Lokasi</option>
-                  <option value="1">Lokasi 1</option>
-                  <option value="2">Lokasi 2</option>
-                  <option value="3">Lokasi 3</option>
-                  <option value="4">Lokasi 4</option>
-                  <option value="5">Lokasi 5</option>
+                  <optgroup label="Dalam Negeri">
+                    <option value="1">Lokasi 1</option>
+                    <option value="2">Lokasi 2</option>
+                    <option value="3">Lokasi 3</option>
+                    <option value="4">Lokasi 4</option>
+                    <option value="5">Lokasi 5</option>
+                  </optgroup>
+                  <optgroup label="Luar Negeri">
+                    <option value="1a">Location 1</option>
+                    <option value="2a">Location 2</option>
+                    <option value="3a">Location 3</option>
+                    <option value="4a">Location 4</option>
+                    <option value="5a">Location 5</option>
+                  </optgroup>
                 </select>
               </div>
               <div class="mb-3">
@@ -136,8 +145,8 @@
   })
   </script>
   <script>
-  $("#pilihLokasi").select2({
-    placeholder: "Pilih Jenis Rempah",
+  $("#domisili").select2({
+    placeholder: "Pilih Domisili",
     allowClear: true
   });
   </script>

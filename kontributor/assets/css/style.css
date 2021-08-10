@@ -184,6 +184,11 @@ footer p {
   margin-right: .5rem;
 }
 
+.editor-style{
+  border: 1px solid #ced4da !important;
+  height:200px;
+}
+
 @media (max-width: 991.98px) {
   .sub-judul {
     font-size: 20px;

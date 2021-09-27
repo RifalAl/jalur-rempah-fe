@@ -105,7 +105,7 @@
   /*display: block;*/
 }
 
-.preview-profil-photo{
+.preview-profil-photo {
   width: 200px;
   height: 200px;
   object-fit: cover;
@@ -195,4 +195,11 @@ little {
 
 .tagin-tag {
   padding: 0px 7px;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 17.5% !important;
+
+  }
 }
